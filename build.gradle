@@ -9,8 +9,16 @@
 // Apply the java-library plugin to add support for Java Library
 apply plugin: 'java-library'
 
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+compileJava.options.encoding = 'UTF-8'
+
 // In this section you declare where to find the dependencies of your project
 repositories {
+
+	mavenLocal()
+	mavenCentral()
+	
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
@@ -32,5 +40,10 @@ dependencies
 
 buildscript
 {
-	maven { url "https://libraries.minecraft.net" }
+	repositories
+	{
+		mavenLocal()
+		mavenCentral()
+		maven { url "https://libraries.minecraft.net" }
+	}
 }
