@@ -18,6 +18,7 @@ repositories {
 
 	mavenLocal()
 	mavenCentral()
+	maven { url "https://libraries.minecraft.net" }
 	
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
