@@ -1,14 +1,10 @@
 package net.gunivers.cmdloader;
 
-import com.mojang.brigadier.Command;
-import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.CommandDispatcher;
-import com.mojang.brigadier.arguments.ArgumentType;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
-import com.mojang.brigadier.builder.ArgumentBuilder;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.builder.RequiredArgumentBuilder;
-import com.mojang.brigadier.tree.ArgumentCommandNode;
+import com.mojang.brigadier.context.CommandContext;
 
 public class CookieCommand
 {
@@ -17,7 +13,7 @@ public class CookieCommand
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public CookieCommand()
 	{	
-		dispatcher.register(LiteralArgumentBuilder.literal("cookie")
+		dispatcher.register((LiteralArgumentBuilder)LiteralArgumentBuilder.literal("cookie")
 			.then
 			(RequiredArgumentBuilder.argument("nb", IntegerArgumentType.integer(0, 128)))
 				.executes((CommandContext<Object> c) ->
