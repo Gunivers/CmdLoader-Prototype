@@ -1,1 +1,54 @@
-test
+{
+    "gift": {
+		"description": "Do a gift",
+		"only_op": false,
+		"arguments": [
+			{
+				"number": {
+					"type": "integer",
+					"set_in_score": {
+						"objective": "Cookie",
+						"selector": "@s"
+					},
+					"arguments": [
+						{
+							"entity": {
+								"type": "keyworld",
+								"save_in_score": {
+									"objective": "Gift",
+									"entity": "@s",
+									"operation": "=",
+									"value": 0
+								},
+								"argument": [
+									{
+										"selector": {
+											"type": "selector",
+											"condition": {
+												"type": ["player", "skeleton", "zombie", "wither_skeleton", "stray", "zombie_villager", "husk", "villager"],
+												"error_message": "Invalid selector entered."
+											}
+										}
+									}
+								]
+							},
+							"block": {
+								"type": "keyworld",
+								"save_in_score": {
+									"objective": "Gift",
+									"selector": "@s",
+									"operation": "=",
+									"value": 1
+								},
+								"argument": [
+									{
+										"selector": {
+											"type": "xyz"
+										}
+									}
+								]
+							}
+						}
+					]
+				}
+			}
