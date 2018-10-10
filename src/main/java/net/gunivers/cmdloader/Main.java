@@ -13,8 +13,6 @@ import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.ParseResults;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 
-import net.gunivers.cmdloader.keys.KeyInstance;
-
 public class Main {
 
 	public static CommandDispatcher<Sender> dispatcher = new CommandDispatcher<>();
@@ -26,7 +24,6 @@ public class Main {
 
 		if (TEST_KEY_INSTANCE)
 		{
-			KeyInstance<Integer> ki = KeyInstance.newInstance(Key<Integer>.class, 0);
 		}
 		
 		if (TEST_JSON)

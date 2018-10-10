@@ -5,7 +5,8 @@ import net.gunivers.cmdloader.keys.SimpleValueKey;
 public class SimpleLongKey extends SimpleValueKey<Long>
 {
 
-	public SimpleLongKey() {
+	public SimpleLongKey(String name, Long defaultValue, boolean singleton) {
+		super(name, defaultValue, singleton);
 		// TODO Auto-generated constructor stub
 	}
 
