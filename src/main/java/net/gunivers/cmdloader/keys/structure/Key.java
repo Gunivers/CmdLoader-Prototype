@@ -63,6 +63,7 @@ public abstract class Key<T>
 	// Abstract Methods
 	public abstract Predicate<T> getValider();
 	public abstract KeyInstance<T> parse(T value);
+	public abstract Object trigger(T value);
 	
 	/**
 	 * 
@@ -98,6 +99,11 @@ public abstract class Key<T>
 				throw new AssertionError("Illegal value assertion for " + this.key.name + ": " + value);
 			
 			this.value = value;
+		}
+		
+		public Object trigger(K value)
+		{
+			return key.trigger(value);
 		}
 		
 		public K getValue() { return value; }
