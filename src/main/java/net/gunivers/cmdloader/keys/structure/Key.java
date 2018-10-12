@@ -26,7 +26,7 @@ public abstract class Key<T>
 	private Predicate<T> valider;
 	
 	
-	public Key(String name, T defaultValue, boolean singleton, boolean keyContainer)
+	protected Key(String name, T defaultValue, boolean singleton, boolean keyContainer)
 	{
 		if (keys.containsKey(name))
 			throw new InstantiationError("A Key with the name '" + name + "' already exist");
@@ -62,8 +62,8 @@ public abstract class Key<T>
 
 	// Abstract Methods
 	public abstract Predicate<T> getValider();
-	public abstract KeyInstance<T> parse(T value);
-	public abstract Object trigger(T value);
+	public abstract KeyInstance<T> parse(String value);
+	public abstract boolean trigger(T value, KeyInstance<T> instance);
 	
 	/**
 	 * 
@@ -101,9 +101,9 @@ public abstract class Key<T>
 			this.value = value;
 		}
 		
-		public Object trigger(K value)
+		public boolean trigger(K value)
 		{
-			return key.trigger(value);
+			return key.trigger(value, this);
 		}
 		
 		public K getValue() { return value; }

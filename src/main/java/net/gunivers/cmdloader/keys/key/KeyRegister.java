@@ -1,4 +1,4 @@
-package net.gunivers.cmdloader.keys;
+package net.gunivers.cmdloader.keys.key;
 
 import java.util.ArrayList;
 
@@ -25,8 +25,8 @@ public abstract class KeyRegister
 	 * 	- In this example, the class SelectorKey extends from SimpleValueKey
 	 */
 	
-	
-	
+	public static final Description description = new Description();
+	public static final OnlyOp only_op = new OnlyOp();
 	
 	public static ArrayList<SimpleValueKey<?>> getSimpleValueKeys()
 	{
