@@ -4,9 +4,9 @@ import java.util.function.Predicate;
 
 import net.gunivers.cmdloader.keys.structure.SimpleValueKey;
 
-public class Description extends SimpleValueKey<String>
+public class DescriptionKey extends SimpleValueKey<String>
 {
-	protected Description()
+	protected DescriptionKey()
 	{
 		super("description", "There was no description provided nor found", true);
 	}

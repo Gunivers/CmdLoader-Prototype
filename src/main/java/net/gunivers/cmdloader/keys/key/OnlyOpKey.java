@@ -4,9 +4,9 @@ import java.util.function.Predicate;
 
 import net.gunivers.cmdloader.keys.structure.SimpleValueKey;
 
-public class OnlyOp extends SimpleValueKey<Boolean>
+public class OnlyOpKey extends SimpleValueKey<Boolean>
 {
-	protected OnlyOp()
+	protected OnlyOpKey()
 	{
 		super("only_op", true, true);
 	}

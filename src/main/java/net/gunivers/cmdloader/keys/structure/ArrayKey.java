@@ -2,17 +2,19 @@ package net.gunivers.cmdloader.keys.structure;
 
 import java.util.function.Predicate;
 
-public abstract class TypedArrayKey<T> extends Key<T[]>
+import net.gunivers.cmdloader.keys.Key;
+
+public abstract class ArrayKey<T> extends Key<T[]>
 {
 	private int min = 0;
 	private int max = Integer.MAX_VALUE;
 	
-	public TypedArrayKey(String name, T[] defaultValue, boolean singleton)
+	public ArrayKey(String name, T[] defaultValue, boolean singleton)
 	{
 		super(name, defaultValue, singleton, true);
 	}
 	
-	public TypedArrayKey(String name, T[] defaultValue, boolean singleton, int min, int max)
+	public ArrayKey(String name, T[] defaultValue, boolean singleton, int min, int max)
 	{
 		super(name, defaultValue, singleton, true);
 		

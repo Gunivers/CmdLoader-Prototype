@@ -1,4 +1,4 @@
-package net.gunivers.cmdloader.keys.structure;
+package net.gunivers.cmdloader.keys;
 
 import java.util.ArrayList;
 import java.util.HashMap;

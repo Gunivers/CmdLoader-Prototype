@@ -1,12 +1,13 @@
 package net.gunivers.cmdloader.keys.key;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Map;
 
-import net.gunivers.cmdloader.keys.structure.Key;
-import net.gunivers.cmdloader.keys.structure.SimpleArrayKey;
-import net.gunivers.cmdloader.keys.structure.SimpleKeyCompound;
+import net.gunivers.cmdloader.keys.Key;
 import net.gunivers.cmdloader.keys.structure.SimpleValueKey;
-import net.gunivers.cmdloader.keys.structure.TypedArrayKey;
+import net.gunivers.cmdloader.keys.structure.ArrayKey;
+import net.gunivers.cmdloader.keys.structure.CompoundKey;
 
 /**
  * 
@@ -15,51 +16,40 @@ import net.gunivers.cmdloader.keys.structure.TypedArrayKey;
  */
 public abstract class KeyRegister
 {
-	/*
-	 * Add here any key that you creates, as the following:
-	 * <Type> <name> = new <Type>();
+	public static final DescriptionKey description = new DescriptionKey();
+	public static final OnlyOpKey only_op = new OnlyOpKey();
+	
+	
+	public static final Map<String, Key<?>> keys = Collections.unmodifiableMap(KeyRegister.keys);
+	
+	/**
 	 * 
-	 * e.g:
-	 * SelectorKey selectorKey = new SelectorKey();
-	 * 
-	 * 	- In this example, the class SelectorKey extends from SimpleValueKey
+	 * @return an ArrayList<SimpleValueKey<?>>
+	 *                                        which contains all the key that were registered
 	 */
-	
-	public static final Description description = new Description();
-	public static final OnlyOp only_op = new OnlyOp();
-	
 	public static ArrayList<SimpleValueKey<?>> getSimpleValueKeys()
 	{
 		final ArrayList<SimpleValueKey<?>> keys = new ArrayList<>();
 		
-		Key.getKeys().values().stream().filter(k -> k instanceof SimpleValueKey).forEach(k -> keys.add((SimpleValueKey<?>) k));
+		KeyRegister.keys.values().stream().filter(k -> k instanceof SimpleValueKey).forEach(k -> keys.add((SimpleValueKey<?>) k));
 		
 		return keys;
 	}
 	
-	public static ArrayList<SimpleArrayKey> getSimpleArrayKeys()
+	public static ArrayList<ArrayKey<?>> getTypedArrayKeys()
 	{
-		final ArrayList<SimpleArrayKey> keys = new ArrayList<>();
+		final ArrayList<ArrayKey<?>> keys = new ArrayList<>();
 		
-		Key.getKeys().values().stream().filter(k -> k instanceof SimpleArrayKey).forEach(k -> keys.add((SimpleArrayKey) k));
+		KeyRegister.keys.values().stream().filter(k -> k instanceof ArrayKey).forEach(k -> keys.add((ArrayKey<?>) k));
 		
 		return keys;
 	}
 	
-	public static ArrayList<TypedArrayKey<?>> getTypedArrayKeys()
+	public static ArrayList<CompoundKey<?>> getSimpleCompoundKeys()
 	{
-		final ArrayList<TypedArrayKey<?>> keys = new ArrayList<>();
+		final ArrayList<CompoundKey<?>> keys = new ArrayList<>();
 		
-		Key.getKeys().values().stream().filter(k -> k instanceof TypedArrayKey).forEach(k -> keys.add((TypedArrayKey<?>) k));
-		
-		return keys;
-	}
-	
-	public static ArrayList<SimpleKeyCompound> getSimpleCompoundKeys()
-	{
-		final ArrayList<SimpleKeyCompound> keys = new ArrayList<>();
-		
-		Key.getKeys().values().stream().filter(k -> k instanceof SimpleKeyCompound).forEach(k -> keys.add((SimpleKeyCompound) k));
+		KeyRegister.keys.values().stream().filter(k -> k instanceof CompoundKey).forEach(k -> keys.add((CompoundKey<?>) k));
 		
 		return keys;
 	}
