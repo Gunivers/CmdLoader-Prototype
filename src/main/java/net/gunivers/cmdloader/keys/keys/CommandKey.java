@@ -9,6 +9,11 @@ import net.gunivers.cmdloader.keys.structure.abstracts.CompoundKey;
 import net.gunivers.cmdloader.keys.structure.interfaces.Root;
 import net.gunivers.cmdloader.keys.structure.types.Compound;
 
+/**
+ * 
+ * @author A~Z
+ *
+ */
 public class CommandKey extends CompoundKey implements Root
 {
 	public CommandKey()

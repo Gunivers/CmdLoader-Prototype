@@ -7,6 +7,11 @@ import java.util.HashMap;
 import net.gunivers.cmdloader.keys.Key;
 import net.gunivers.cmdloader.keys.Key.KeyInstance;
 
+/**
+ * 
+ * @author A~Z
+ *
+ */
 @SuppressWarnings("rawtypes")
 public interface KeyContainer
 {

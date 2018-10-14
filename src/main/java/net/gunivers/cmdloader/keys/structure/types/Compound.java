@@ -14,6 +14,11 @@ import net.gunivers.cmdloader.keys.Key.KeyInstance;
 import net.gunivers.cmdloader.keys.keys.KeyRegister;
 import net.gunivers.cmdloader.keys.structure.interfaces.Parsable;
 
+/**
+ * 
+ * @author A~Z
+ *
+ */
 @SuppressWarnings("rawtypes")
 public class Compound implements Parsable<KeyInstance[]>
 {

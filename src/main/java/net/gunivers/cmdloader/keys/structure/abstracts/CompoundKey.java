@@ -7,6 +7,11 @@ import net.gunivers.cmdloader.keys.structure.interfaces.SubValider;
 import net.gunivers.cmdloader.keys.structure.interfaces.KeyContainer;
 import net.gunivers.cmdloader.keys.structure.types.Compound;
 
+/**
+ * 
+ * @author A~Z
+ *
+ */
 public abstract class CompoundKey extends Key<Compound> implements SubValider<Compound>, KeyContainer
 {
 	private int min = 0;

@@ -4,6 +4,11 @@ import java.util.function.Predicate;
 
 import net.gunivers.cmdloader.keys.structure.abstracts.SimpleValueKey;
 
+/**
+ * 
+ * @author A~Z
+ *
+ */
 public class OnlyOpKey extends SimpleValueKey<Boolean>
 {
 	protected OnlyOpKey()

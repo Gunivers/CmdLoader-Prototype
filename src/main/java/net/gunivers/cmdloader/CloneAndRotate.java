@@ -4,6 +4,11 @@ import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.builder.RequiredArgumentBuilder;
 
+/**
+ * 
+ * @author Oromis
+ *
+ */
 public class CloneAndRotate {
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })

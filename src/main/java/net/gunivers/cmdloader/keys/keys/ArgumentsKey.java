@@ -7,6 +7,11 @@ import net.gunivers.cmdloader.keys.structure.abstracts.ArrayKey;
 import net.gunivers.cmdloader.keys.structure.interfaces.KeyContainer;
 import net.gunivers.cmdloader.keys.structure.types.Compound;
 
+/**
+ * 
+ * @author A~Z
+ *
+ */
 public class ArgumentsKey extends ArrayKey<Compound> implements KeyContainer
 {
 	public ArgumentsKey()

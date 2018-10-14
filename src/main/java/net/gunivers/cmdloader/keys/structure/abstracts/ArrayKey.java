@@ -5,6 +5,12 @@ import java.util.function.Predicate;
 import net.gunivers.cmdloader.keys.Key;
 import net.gunivers.cmdloader.keys.structure.interfaces.SubValider;
 
+/**
+ * 
+ * @author A~Z
+ *
+ * @param <T>
+ */
 public abstract class ArrayKey<T> extends Key<T[]> implements SubValider<T[]>
 {
 	private int min = 0;

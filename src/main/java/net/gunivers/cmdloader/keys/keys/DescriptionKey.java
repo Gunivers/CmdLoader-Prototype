@@ -4,6 +4,11 @@ import java.util.function.Predicate;
 
 import net.gunivers.cmdloader.keys.structure.abstracts.SimpleValueKey;
 
+/**
+ * 
+ * @author A~Z
+ *
+ */
 public class DescriptionKey extends SimpleValueKey<String>
 {
 	protected DescriptionKey()

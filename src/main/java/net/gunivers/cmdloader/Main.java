@@ -13,19 +13,19 @@ import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.ParseResults;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 
+/**
+ * 
+ * @author Oromis
+ *
+ */
 public class Main {
 
 	public static CommandDispatcher<Sender> dispatcher = new CommandDispatcher<>();
 	public final static boolean TEST_JSON = false;
-	public final static boolean TEST_KEY_INSTANCE = true;
 
 	@SuppressWarnings({ "unused", "unchecked" })
-	public static void main(String[] args) throws CommandSyntaxException {
-
-		if (TEST_KEY_INSTANCE)
-		{
-		}
-		
+	public static void main(String[] args) throws CommandSyntaxException
+	{	
 		if (TEST_JSON)
 		{
 			HashMap<String, Object> hm = new HashMap<>();

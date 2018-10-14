@@ -6,6 +6,9 @@ import org.json.simple.parser.ParseException;
 
 import net.gunivers.cmdloader.keys.structure.interfaces.Parsable;
 
+/**
+ * @author A~Z
+ */
 public class Array<T> implements Parsable<T[]>
 {
 	private static final String key = "array";
