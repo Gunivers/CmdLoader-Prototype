@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.Set;
 import java.util.function.Predicate;
 
+import net.gunivers.cmdloader.keys.structure.interfaces.Parsable;
+
 /**
  * 
  * @author A~Z
@@ -13,12 +15,11 @@ import java.util.function.Predicate;
  *           The type of held value
  */
 @SuppressWarnings("unchecked")
-public abstract class Key<T>
+public abstract class Key<T> implements Parsable<Key.KeyInstance<T>>
 {
 	private final static HashMap<String, Key<?>> keys = new HashMap<>();
 
 	protected final boolean isSingleton;
-	protected final boolean isKeyContainer;
 	
 	protected final String name;
 	protected T value;
@@ -26,7 +27,7 @@ public abstract class Key<T>
 	private Predicate<T> valider;
 	
 	
-	protected Key(String name, T defaultValue, boolean singleton, boolean keyContainer)
+	protected Key(String name, T defaultValue, boolean singleton)
 	{
 		if (keys.containsKey(name))
 			throw new InstantiationError("A Key with the name '" + name + "' already exist");
@@ -35,9 +36,7 @@ public abstract class Key<T>
 		
 		this.name = name;
 		this.value = defaultValue;
-		
 		this.isSingleton = singleton;
-		this.isKeyContainer = keyContainer;
 		
 		this.valider = this.getValider();
 	}
@@ -62,7 +61,6 @@ public abstract class Key<T>
 
 	// Abstract Methods
 	public abstract Predicate<T> getValider();
-	public abstract KeyInstance<T> parse(String value);
 	public abstract boolean trigger(T value, KeyInstance<T> instance);
 	
 	/**
@@ -87,9 +85,9 @@ public abstract class Key<T>
 		private KeyInstance(K value, Key<K> key)
 		{
 			if (key.isSingleton && instances.stream().anyMatch(k -> k.key == key))
-				throw new InstantiationError("Tried to instantiate the isSingleton Key '" + key + "' 2 times");
+				throw new InstantiationError("Tried to instantiate the singleton Key '" + key + "' 2 times");
 			
-			this.value = value;
+			this.setValue(value);
 			this.key = key;
 		}
 		

@@ -1,13 +1,13 @@
-package net.gunivers.cmdloader.keys.key;
+package net.gunivers.cmdloader.keys.keys;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Map;
 
 import net.gunivers.cmdloader.keys.Key;
-import net.gunivers.cmdloader.keys.structure.SimpleValueKey;
-import net.gunivers.cmdloader.keys.structure.ArrayKey;
-import net.gunivers.cmdloader.keys.structure.CompoundKey;
+import net.gunivers.cmdloader.keys.structure.abstracts.ArrayKey;
+import net.gunivers.cmdloader.keys.structure.abstracts.CompoundKey;
+import net.gunivers.cmdloader.keys.structure.abstracts.SimpleValueKey;
 
 /**
  * 
@@ -16,11 +16,14 @@ import net.gunivers.cmdloader.keys.structure.CompoundKey;
  */
 public abstract class KeyRegister
 {
+	public static final ArgumentsKey arguments = new ArgumentsKey();
+	public static final CommandKey command = new CommandKey();
 	public static final DescriptionKey description = new DescriptionKey();
 	public static final OnlyOpKey only_op = new OnlyOpKey();
 	
 	
-	public static final Map<String, Key<?>> keys = Collections.unmodifiableMap(KeyRegister.keys);
+	@SuppressWarnings("rawtypes")
+	public static final Map<String, Key> keys = Collections.unmodifiableMap(KeyRegister.keys);
 	
 	/**
 	 * 
@@ -45,11 +48,11 @@ public abstract class KeyRegister
 		return keys;
 	}
 	
-	public static ArrayList<CompoundKey<?>> getSimpleCompoundKeys()
+	public static ArrayList<CompoundKey> getSimpleCompoundKeys()
 	{
-		final ArrayList<CompoundKey<?>> keys = new ArrayList<>();
+		final ArrayList<CompoundKey> keys = new ArrayList<>();
 		
-		KeyRegister.keys.values().stream().filter(k -> k instanceof CompoundKey).forEach(k -> keys.add((CompoundKey<?>) k));
+		KeyRegister.keys.values().stream().filter(k -> k instanceof CompoundKey).forEach(k -> keys.add((CompoundKey) k));
 		
 		return keys;
 	}

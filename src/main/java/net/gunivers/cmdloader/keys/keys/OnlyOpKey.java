@@ -1,8 +1,8 @@
-package net.gunivers.cmdloader.keys.key;
+package net.gunivers.cmdloader.keys.keys;
 
 import java.util.function.Predicate;
 
-import net.gunivers.cmdloader.keys.structure.SimpleValueKey;
+import net.gunivers.cmdloader.keys.structure.abstracts.SimpleValueKey;
 
 public class OnlyOpKey extends SimpleValueKey<Boolean>
 {
