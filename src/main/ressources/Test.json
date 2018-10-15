@@ -52,6 +52,12 @@
 					]
 				}
 			}
-		]
+		],
+	    "execute": {
+			"commands": [
+				"execute if score @s Gift match 0 as %selector% run function foo:gift_entity",
+				"execute if score @s Gift match 1 positioned %selector% run function foo:gift_entity"
+			]
+		}
 	}
-}
+}				
