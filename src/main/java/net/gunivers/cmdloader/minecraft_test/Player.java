@@ -13,7 +13,7 @@ public class Player extends Entity {
 		return isOp;
 	}
 	
-	public void getIsOp(boolean isOp) {
+	public void setOp(boolean isOp) {
 		this.isOp = isOp;
 	}
 	
