@@ -23,31 +23,25 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
  * @author Oromis
  *
  */
-public class Main
-{
+public class Main {
 	public static CommandDispatcher<Sender> dispatcher = new CommandDispatcher<>();
 	public final static boolean TEST_JSON = true;
 
 	// À revoir
 	@SuppressWarnings("unchecked")
-	public static void readJSONObjectAndDisp(HashMap<String, Object> hm, int numberTab) throws ParseException
-	{
-		for (Entry<String, Object> entry : hm.entrySet())
-		{
+	public static void readJSONObjectAndDisp(HashMap<String, Object> hm, int numberTab) throws ParseException {
+		for (Entry<String, Object> entry : hm.entrySet()) {
 			System.out.println(Strings.repeat("\t", numberTab) + entry.getKey());
 
-			if (entry.getValue() instanceof JSONObject)
-			{
+			if (entry.getValue() instanceof JSONObject) {
 				HashMap<String, Object> hm2 = new HashMap<>();
 				hm2.putAll((JSONObject) entry.getValue());
-				
+
 				readJSONObjectAndDisp(hm2, numberTab + 1);
-				
-			} else if (entry.getValue() instanceof JSONArray)
-			{
+
+			} else if (entry.getValue() instanceof JSONArray) {
 				readJSONArrayAndDisp((JSONArray) entry.getValue(), numberTab + 1);
-			} else
-			{
+			} else {
 				System.out.println(Strings.repeat("\t", numberTab + 1) + entry.getValue());
 			}
 
@@ -55,46 +49,35 @@ public class Main
 	}
 
 	@SuppressWarnings("unchecked")
-	public static void readJSONArrayAndDisp(JSONArray array, int numberTab)
-	{
-		for (Object o : array)
-		{
-			if (o instanceof JSONObject)
-			{
-				try
-				{
+	public static void readJSONArrayAndDisp(JSONArray array, int numberTab) {
+		for (Object o : array) {
+			if (o instanceof JSONObject) {
+				try {
 					readJSONObjectAndDisp((HashMap<String, Object>) o, numberTab);
-				} catch (ParseException e)
-				{
+				} catch (ParseException e) {
 					e.printStackTrace();
 				}
-			} else System.out.println(Strings.repeat("\t", numberTab + 1) + o);
+			} else
+				System.out.println(Strings.repeat("\t", numberTab + 1) + o);
 		}
 	}
 
 	@SuppressWarnings({ "unused", "unchecked" })
-	public static void main(String[] args) throws CommandSyntaxException
-	{
-		if (TEST_JSON)
-		{
+	public static void main(String[] args) throws CommandSyntaxException {
+		if (TEST_JSON) {
 			HashMap<String, Object> hm = new HashMap<>();
-			
-			try (FileReader fr = new FileReader(new File(Main.class.getResource("/Test.json").toURI())))
-			{
+
+			try (FileReader fr = new FileReader(new File(Main.class.getResource("/Test.json").toURI()))) {
 				hm.putAll((JSONObject) new JSONParser().parse(fr));
-			} catch (URISyntaxException | IOException | ParseException e)
-			{
+			} catch (URISyntaxException | IOException | ParseException e) {
 				e.printStackTrace();
 			}
 
-			try
-			{
+			try {
 				readJSONObjectAndDisp(hm, 0);
-			} catch (ParseException e)
-			{
+			} catch (ParseException e) {
 				e.printStackTrace();
 			}
-
 		}
 
 		CloneAndRotate cc = new CloneAndRotate();

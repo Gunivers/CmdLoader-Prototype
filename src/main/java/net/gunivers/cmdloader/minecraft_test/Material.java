@@ -1,0 +1,1429 @@
+package net.gunivers.cmdloader.minecraft_test;
+
+public enum Material {
+
+	 ACACIA_BARK,
+	 ACACIA_BOAT,
+	 ACACIA_BUTTON,
+	 ACACIA_DOOR,
+	 ACACIA_FENCE,
+	 ACACIA_FENCE_GATE,
+	 ACACIA_LEAVES,
+	 ACACIA_LOG,
+	 ACACIA_PLANKS,
+	 ACACIA_PRESSURE_PLATE,
+	 ACACIA_SAPLING,
+	 ACACIA_SLAB,
+	 ACACIA_STAIRS,
+	 ACACIA_TRAPDOOR,
+	 ACTIVATOR_RAIL,
+	 AIR,
+	 ALLIUM,
+	 ANDESITE,
+	 ANVIL,
+	 APPLE,
+	 ARMOR_STAND,
+	 ARROW,
+	 ATTACHED_MELON_STEM,
+	 ATTACHED_PUMPKIN_STEM,
+	 AZURE_BLUET,
+	 BAKED_POTATO,
+	 BARRIER,
+	 BAT_SPAWN_EGG,
+	 BEACON,
+	 BEDROCK,
+	 BEEF,
+	 BEETROOT,
+	 BEETROOTS,
+	 BEETROOT_SEEDS,
+	 BEETROOT_SOUP,
+	 BIRCH_BARK,
+	 BIRCH_BOAT,
+	 BIRCH_BUTTON,
+	 BIRCH_DOOR,
+	 BIRCH_FENCE,
+	 BIRCH_FENCE_GATE,
+	 BIRCH_LEAVES,
+	 BIRCH_LOG,
+	 BIRCH_PLANKS,
+	 BIRCH_PRESSURE_PLATE,
+	 BIRCH_SAPLING,
+	 BIRCH_SLAB,
+	 BIRCH_STAIRS,
+	 BIRCH_TRAPDOOR,
+	 BLACK_BANNER,
+	 BLACK_BED,
+	 BLACK_CARPET,
+	 BLACK_CONCRETE,
+	 BLACK_CONCRETE_POWDER,
+	 BLACK_GLAZED_TERRACOTTA,
+	 BLACK_SHULKER_BOX,
+	 BLACK_STAINED_GLASS,
+	 BLACK_STAINED_GLASS_PANE,
+	 BLACK_TERRACOTTA,
+	 BLACK_WALL_BANNER,
+	 BLACK_WOOL,
+	 BLAZE_POWDER,
+	 BLAZE_ROD,
+	 BLAZE_SPAWN_EGG,
+	 BLUE_BANNER,
+	 BLUE_BED,
+	 BLUE_CARPET,
+	 BLUE_CONCRETE,
+	 BLUE_CONCRETE_POWDER,
+	 BLUE_GLAZED_TERRACOTTA,
+	 BLUE_ICE,
+	 BLUE_ORCHID,
+	 BLUE_SHULKER_BOX,
+	 BLUE_STAINED_GLASS,
+	 BLUE_STAINED_GLASS_PANE,
+	 BLUE_TERRACOTTA,
+	 BLUE_WALL_BANNER,
+	 BLUE_WOOL,
+	 BONE,
+	 BONE_BLOCK,
+	 BONE_MEAL,
+	 BOOK,
+	 BOOKSHELF,
+	 BOW,
+	 BOWL,
+	 BRAIN_CORAL,
+	 BRAIN_CORAL_BLOCK,
+	 BRAIN_CORAL_FAN,
+	 BREAD,
+	 BREWING_STAND,
+	 BRICK,
+	 BRICKS,
+	 BRICK_SLAB,
+	 BRICK_STAIRS,
+	 BROWN_BANNER,
+	 BROWN_BED,
+	 BROWN_CARPET,
+	 BROWN_CONCRETE,
+	 BROWN_CONCRETE_POWDER,
+	 BROWN_GLAZED_TERRACOTTA,
+	 BROWN_MUSHROOM,
+	 BROWN_MUSHROOM_BLOCK,
+	 BROWN_SHULKER_BOX,
+	 BROWN_STAINED_GLASS,
+	 BROWN_STAINED_GLASS_PANE,
+	 BROWN_TERRACOTTA,
+	 BROWN_WALL_BANNER,
+	 BROWN_WOOL,
+	 BUBBLE_COLUMN,
+	 BUBBLE_CORAL,
+	 BUBBLE_CORAL_BLOCK,
+	 BUBBLE_CORAL_FAN,
+	 BUCKET,
+	 CACTUS,
+	 CACTUS_GREEN,
+	 CAKE,
+	 CARROT,
+	 CARROTS,
+	 CARROT_ON_A_STICK,
+	 CARVED_PUMPKIN,
+	 CAULDRON,
+	 CAVE_AIR,
+	 CAVE_SPIDER_SPAWN_EGG,
+	 CHAINMAIL_BOOTS,
+	 CHAINMAIL_CHESTPLATE,
+	 CHAINMAIL_HELMET,
+	 CHAINMAIL_LEGGINGS,
+	 CHAIN_COMMAND_BLOCK,
+	 CHARCOAL,
+	 CHEST,
+	 CHEST_MINECART,
+	 CHICKEN,
+	 CHICKEN_SPAWN_EGG,
+	 CHIPPED_ANVIL,
+	 CHISELED_QUARTZ_BLOCK,
+	 CHISELED_RED_SANDSTONE,
+	 CHISELED_SANDSTONE,
+	 CHISELED_STONE_BRICKS,
+	 CHORUS_FLOWER,
+	 CHORUS_FRUIT,
+	 CHORUS_FRUIT_POPPED,
+	 CHORUS_PLANT,
+	 CLAY,
+	 CLAY_BALL,
+	 CLOCK,
+	 CLOWNFISH,
+	 CLOWNFISH_BUCKET,
+	 COAL,
+	 COAL_BLOCK,
+	 COAL_ORE,
+	 COARSE_DIRT,
+	 COBBLESTONE,
+	 COBBLESTONE_SLAB,
+	 COBBLESTONE_STAIRS,
+	 COBBLESTONE_WALL,
+	 COBWEB,
+	 COCOA,
+	 COCOA_BEANS,
+	 COD,
+	 COD_BUCKET,
+	 COD_MOB_SPAWN_EGG,
+	 COMMAND_BLOCK,
+	 COMMAND_BLOCK_MINECART,
+	 COMPARATOR,
+	 COMPASS,
+	 CONDUIT,
+	 COOKED_BEEF,
+	 COOKED_CHICKEN,
+	 COOKED_COD,
+	 COOKED_MUTTON,
+	 COOKED_PORKCHOP,
+	 COOKED_RABBIT,
+	 COOKED_SALMON,
+	 COOKIE,
+	 COW_SPAWN_EGG,
+	 CRACKED_STONE_BRICKS,
+	 CRAFTING_TABLE,
+	 CREEPER_HEAD,
+	 CREEPER_SPAWN_EGG,
+	 CREEPER_WALL_HEAD,
+	 CUT_RED_SANDSTONE,
+	 CUT_SANDSTONE,
+	 CYAN_BANNER,
+	 CYAN_BED,
+	 CYAN_CARPET,
+	 CYAN_CONCRETE,
+	 CYAN_CONCRETE_POWDER,
+	 CYAN_DYE,
+	 CYAN_GLAZED_TERRACOTTA,
+	 CYAN_SHULKER_BOX,
+	 CYAN_STAINED_GLASS,
+	 CYAN_STAINED_GLASS_PANE,
+	 CYAN_TERRACOTTA,
+	 CYAN_WALL_BANNER,
+	 CYAN_WOOL,
+	 DAMAGED_ANVIL,
+	 DANDELION,
+	 DANDELION_YELLOW,
+	 DARK_OAK_BARK,
+	 DARK_OAK_BOAT,
+	 DARK_OAK_BUTTON,
+	 DARK_OAK_DOOR,
+	 DARK_OAK_FENCE,
+	 DARK_OAK_FENCE_GATE,
+	 DARK_OAK_LEAVES,
+	 DARK_OAK_LOG,
+	 DARK_OAK_PLANKS,
+	 DARK_OAK_PRESSURE_PLATE,
+	 DARK_OAK_SAPLING,
+	 DARK_OAK_SLAB,
+	 DARK_OAK_STAIRS,
+	 DARK_OAK_TRAPDOOR,
+	 DARK_PRISMARINE,
+	 DARK_PRISMARINE_SLAB,
+	 DARK_PRISMARINE_STAIRS,
+	 DAYLIGHT_DETECTOR,
+	 DEAD_BRAIN_CORAL_BLOCK,
+	 DEAD_BUBBLE_CORAL_BLOCK,
+	 DEAD_BUSH,
+	 DEAD_FIRE_CORAL_BLOCK,
+	 DEAD_HORN_CORAL_BLOCK,
+	 DEAD_TUBE_CORAL_BLOCK,
+	 DEBUG_STICK,
+	 DETECTOR_RAIL,
+	 DIAMOND,
+	 DIAMOND_AXE,
+	 DIAMOND_BLOCK,
+	 DIAMOND_BOOTS,
+	 DIAMOND_CHESTPLATE,
+	 DIAMOND_HELMET,
+	 DIAMOND_HOE,
+	 DIAMOND_HORSE_ARMOR,
+	 DIAMOND_LEGGINGS,
+	 DIAMOND_ORE,
+	 DIAMOND_PICKAXE,
+	 DIAMOND_SHOVEL,
+	 DIAMOND_SWORD,
+	 DIORITE,
+	 DIRT,
+	 DISPENSER,
+	 DOLPHIN_SPAWN_EGG,
+	 DONKEY_SPAWN_EGG,
+	 DRAGON_BREATH,
+	 DRAGON_EGG,
+	 DRAGON_HEAD,
+	 DRAGON_WALL_HEAD,
+	 DRIED_KELP,
+	 DRIED_KELP_BLOCK,
+	 DROPPER,
+	 DROWNED_SPAWN_EGG,
+	 EGG,
+	 ELDER_GUARDIAN_SPAWN_EGG,
+	 ELYTRA,
+	 EMERALD,
+	 EMERALD_BLOCK,
+	 EMERALD_ORE,
+	 ENCHANTED_BOOK,
+	 ENCHANTED_GOLDEN_APPLE,
+	 ENCHANTING_TABLE,
+	 ENDERMAN_SPAWN_EGG,
+	 ENDERMITE_SPAWN_EGG,
+	 ENDER_CHEST,
+	 ENDER_EYE,
+	 ENDER_PEARL,
+	 END_CRYSTAL,
+	 END_GATEWAY,
+	 END_PORTAL,
+	 END_PORTAL_FRAME,
+	 END_ROD,
+	 END_STONE,
+	 END_STONE_BRICKS,
+	 EVOCATION_ILLAGER_SPAWN_EGG,
+	 EXPERIENCE_BOTTLE,
+	 FARMLAND,
+	 FEATHER,
+	 FERMENTED_SPIDER_EYE,
+	 FERN,
+	 FILLED_MAP,
+	 FIRE,
+	 FIREWORK_ROCKET,
+	 FIREWORK_STAR,
+	 FIRE_CHARGE,
+	 FIRE_CORAL,
+	 FIRE_CORAL_BLOCK,
+	 FIRE_CORAL_FAN,
+	 FISHING_ROD,
+	 FLINT,
+	 FLINT_AND_STEEL,
+	 FLOWER_POT,
+	 FROSTED_ICE,
+	 FURNACE,
+	 FURNACE_MINECART,
+	 GHAST_SPAWN_EGG,
+	 GHAST_TEAR,
+	 GLASS,
+	 GLASS_BOTTLE,
+	 GLASS_PANE,
+	 GLOWSTONE,
+	 GLOWSTONE_DUST,
+	 GOLDEN_APPLE,
+	 GOLDEN_AXE,
+	 GOLDEN_BOOTS,
+	 GOLDEN_CARROT,
+	 GOLDEN_CHESTPLATE,
+	 GOLDEN_HELMET,
+	 GOLDEN_HOE,
+	 GOLDEN_HORSE_ARMOR,
+	 GOLDEN_LEGGINGS,
+	 GOLDEN_PICKAXE,
+	 GOLDEN_SHOVEL,
+	 GOLDEN_SWORD,
+	 GOLD_BLOCK,
+	 GOLD_INGOT,
+	 GOLD_NUGGET,
+	 GOLD_ORE,
+	 GRANITE,
+	 GRASS,
+	 GRASS_BLOCK,
+	 GRASS_PATH,
+	 GRAVEL,
+	 GRAY_BANNER,
+	 GRAY_BED,
+	 GRAY_CARPET,
+	 GRAY_CONCRETE,
+	 GRAY_CONCRETE_POWDER,
+	 GRAY_DYE,
+	 GRAY_GLAZED_TERRACOTTA,
+	 GRAY_SHULKER_BOX,
+	 GRAY_STAINED_GLASS,
+	 GRAY_STAINED_GLASS_PANE,
+	 GRAY_TERRACOTTA,
+	 GRAY_WALL_BANNER,
+	 GRAY_WOOL,
+	 GREEN_BANNER,
+	 GREEN_BED,
+	 GREEN_CARPET,
+	 GREEN_CONCRETE,
+	 GREEN_CONCRETE_POWDER,
+	 GREEN_GLAZED_TERRACOTTA,
+	 GREEN_SHULKER_BOX,
+	 GREEN_STAINED_GLASS,
+	 GREEN_STAINED_GLASS_PANE,
+	 GREEN_TERRACOTTA,
+	 GREEN_WALL_BANNER,
+	 GREEN_WOOL,
+	 GUARDIAN_SPAWN_EGG,
+	 GUNPOWDER,
+	 HAY_BLOCK,
+	 HEART_OF_THE_SEA,
+	 HEAVY_WEIGHTED_PRESSURE_PLATE,
+	 HOPPER,
+	 HOPPER_MINECART,
+	 HORN_CORAL,
+	 HORN_CORAL_BLOCK,
+	 HORN_CORAL_FAN,
+	 HORSE_SPAWN_EGG,
+	 HUSK_SPAWN_EGG,
+	 ICE,
+	 INFESTED_CHISELED_STONE_BRICKS,
+	 INFESTED_COBBLESTONE,
+	 INFESTED_CRACKED_STONE_BRICKS,
+	 INFESTED_MOSSY_STONE_BRICKS,
+	 INFESTED_STONE,
+	 INFESTED_STONE_BRICKS,
+	 INK_SAC,
+	 IRON_AXE,
+	 IRON_BARS,
+	 IRON_BLOCK,
+	 IRON_BOOTS,
+	 IRON_CHESTPLATE,
+	 IRON_DOOR,
+	 IRON_HELMET,
+	 IRON_HOE,
+	 IRON_HORSE_ARMOR,
+	 IRON_INGOT,
+	 IRON_LEGGINGS,
+	 IRON_NUGGET,
+	 IRON_ORE,
+	 IRON_PICKAXE,
+	 IRON_SHOVEL,
+	 IRON_SWORD,
+	 IRON_TRAPDOOR,
+	 ITEM_FRAME,
+	 JACK_O_LANTERN,
+	 JUKEBOX,
+	 JUNGLE_BARK,
+	 JUNGLE_BOAT,
+	 JUNGLE_BUTTON,
+	 JUNGLE_DOOR,
+	 JUNGLE_FENCE,
+	 JUNGLE_FENCE_GATE,
+	 JUNGLE_LEAVES,
+	 JUNGLE_LOG,
+	 JUNGLE_PLANKS,
+	 JUNGLE_PRESSURE_PLATE,
+	 JUNGLE_SAPLING,
+	 JUNGLE_SLAB,
+	 JUNGLE_STAIRS,
+	 JUNGLE_TRAPDOOR,
+	 KELP,
+	 KELP_PLANT,
+	 KNOWLEDGE_BOOK,
+	 LADDER,
+	 LAPIS_BLOCK,
+	 LAPIS_LAZULI,
+	 LAPIS_ORE,
+	 LARGE_FERN,
+	 LAVA,
+	 LAVA_BUCKET,
+	 LEAD,
+	 LEATHER,
+	 LEATHER_BOOTS,
+	 LEATHER_CHESTPLATE,
+	 LEATHER_HELMET,
+	 LEATHER_LEGGINGS,
+	 LEVER,
+	 LIGHT_BLUE_BANNER,
+	 LIGHT_BLUE_BED,
+	 LIGHT_BLUE_CARPET,
+	 LIGHT_BLUE_CONCRETE,
+	 LIGHT_BLUE_CONCRETE_POWDER,
+	 LIGHT_BLUE_DYE,
+	 LIGHT_BLUE_GLAZED_TERRACOTTA,
+	 LIGHT_BLUE_SHULKER_BOX,
+	 LIGHT_BLUE_STAINED_GLASS,
+	 LIGHT_BLUE_STAINED_GLASS_PANE,
+	 LIGHT_BLUE_TERRACOTTA,
+	 LIGHT_BLUE_WALL_BANNER,
+	 LIGHT_BLUE_WOOL,
+	 LIGHT_GRAY_BANNER,
+	 LIGHT_GRAY_BED,
+	 LIGHT_GRAY_CARPET,
+	 LIGHT_GRAY_CONCRETE,
+	 LIGHT_GRAY_CONCRETE_POWDER,
+	 LIGHT_GRAY_DYE,
+	 LIGHT_GRAY_GLAZED_TERRACOTTA,
+	 LIGHT_GRAY_SHULKER_BOX,
+	 LIGHT_GRAY_STAINED_GLASS,
+	 LIGHT_GRAY_STAINED_GLASS_PANE,
+	 LIGHT_GRAY_TERRACOTTA,
+	 LIGHT_GRAY_WALL_BANNER,
+	 LIGHT_GRAY_WOOL,
+	 LIGHT_WEIGHTED_PRESSURE_PLATE,
+	 LILAC,
+	 LILY_PAD,
+	 LIME_BANNER,
+	 LIME_BED,
+	 LIME_CARPET,
+	 LIME_CONCRETE,
+	 LIME_CONCRETE_POWDER,
+	 LIME_DYE,
+	 LIME_GLAZED_TERRACOTTA,
+	 LIME_SHULKER_BOX,
+	 LIME_STAINED_GLASS,
+	 LIME_STAINED_GLASS_PANE,
+	 LIME_TERRACOTTA,
+	 LIME_WALL_BANNER,
+	 LIME_WOOL,
+	 LINGERING_POTION,
+	 LLAMA_SPAWN_EGG,
+	 MAGENTA_BANNER,
+	 MAGENTA_BED,
+	 MAGENTA_CARPET,
+	 MAGENTA_CONCRETE,
+	 MAGENTA_CONCRETE_POWDER,
+	 MAGENTA_DYE,
+	 MAGENTA_GLAZED_TERRACOTTA,
+	 MAGENTA_SHULKER_BOX,
+	 MAGENTA_STAINED_GLASS,
+	 MAGENTA_STAINED_GLASS_PANE,
+	 MAGENTA_TERRACOTTA,
+	 MAGENTA_WALL_BANNER,
+	 MAGENTA_WOOL,
+	 MAGMA_BLOCK,
+	 MAGMA_CREAM,
+	 MAGMA_CUBE_SPAWN_EGG,
+	 MAP,
+	 MELON_SPLICE,
+	 MELON,
+	 MELON_SEEDS,
+	 MELON_STEM,
+	 MILK_BUCKET,
+	 MINECART,
+	 MOB_SPAWNER,
+	 MOOSHROOM_SPAWN_EGG,
+	 MOSSY_COBBLESTONE,
+	 MOSSY_COBBLESTONE_WALL,
+	 MOSSY_STONE_BRICKS,
+	 MOVING_PISTON,
+	 MULE_SPAWN_EGG,
+	 MUSHROOM_STEM,
+	 MUSHROOM_STEW,
+	 MUSIC_DISC_11,
+	 MUSIC_DISC_13,
+	 MUSIC_DISC_BLOCKS,
+	 MUSIC_DISC_CAT,
+	 MUSIC_DISC_CHIRP,
+	 MUSIC_DISC_FAR,
+	 MUSIC_DISC_MALL,
+	 MUSIC_DISC_MELLOHI,
+	 MUSIC_DISC_STAL,
+	 MUSIC_DISC_STRAD,
+	 MUSIC_DISC_WAIT,
+	 MUSIC_DISC_WARD,
+	 MUTTON,
+	 MYCELIUM,
+	 NAME_TAG,
+	 NAUTILUS_SHELL,
+	 NETHERRACK,
+	 NETHER_BRICK,
+	 NETHER_BRICKS,
+	 NETHER_BRICK_FENCE,
+	 NETHER_BRICK_SLAB,
+	 NETHER_BRICK_STAIRS,
+	 NETHER_QUARTZ_ORE,
+	 NETHER_STAR,
+	 NETHER_WART,
+	 NETHER_WART_BLOCK,
+	 NOTE_BLOCK,
+	 OAK_BARK,
+	 OAK_BOAT,
+	 OAK_BUTTON,
+	 OAK_DOOR,
+	 OAK_FENCE,
+	 OAK_FENCE_GATE,
+	 OAK_LEAVES,
+	 OAK_LOG,
+	 OAK_PLANKS,
+	 OAK_PRESSURE_PLATE,
+	 OAK_SAPLING,
+	 OAK_SLAB,
+	 OAK_STAIRS,
+	 OAK_TRAPDOOR,
+	 OBSERVER,
+	 OBSIDIAN,
+	 OCELOT_SPAWN_EGG,
+	 ORANGE_BANNER,
+	 ORANGE_BED,
+	 ORANGE_CARPET,
+	 ORANGE_CONCRETE,
+	 ORANGE_CONCRETE_POWDER,
+	 ORANGE_DYE,
+	 ORANGE_GLAZED_TERRACOTTA,
+	 ORANGE_SHULKER_BOX,
+	 ORANGE_STAINED_GLASS,
+	 ORANGE_STAINED_GLASS_PANE,
+	 ORANGE_TERRACOTTA,
+	 ORANGE_TULIP,
+	 ORANGE_WALL_BANNER,
+	 ORANGE_WOOL,
+	 OXEYE_DAISY,
+	 PACKED_ICE,
+	 PAINTING,
+	 PAPER,
+	 PARROT_SPAWN_EGG,
+	 PEONY,
+	 PETRIFIED_OAK_SLAB,
+	 PHANTOM_MEMBRANE,
+	 PHANTOM_SPAWN_EGG,
+	 PIG_SPAWN_EGG,
+	 PINK_BANNER,
+	 PINK_BED,
+	 PINK_CARPET,
+	 PINK_CONCRETE,
+	 PINK_CONCRETE_POWDER,
+	 PINK_DYE,
+	 PINK_GLAZED_TERRACOTTA,
+	 PINK_SHULKER_BOX,
+	 PINK_STAINED_GLASS,
+	 PINK_STAINED_GLASS_PANE,
+	 PINK_TERRACOTTA,
+	 PINK_TULIP,
+	 PINK_WALL_BANNER,
+	 PINK_WOOL,
+	 PISTON,
+	 PISTON_HEAD,
+	 PLAYER_HEAD,
+	 PLAYER_WALL_HEAD,
+	 PODZOL,
+	 POISONOUS_POTATO,
+	 POLAR_BEAR_SPAWN_EGG,
+	 POLISHED_ANDESITE,
+	 POLISHED_DIORITE,
+	 POLISHED_GRANITE,
+	 POPPY,
+	 PORKCHOP,
+	 PORTAL,
+	 POTATO,
+	 POTATOES,
+	 POTION,
+	 POTTED_ACACIA_SAPLING,
+	 POTTED_ALLIUM,
+	 POTTED_AZURE_BLUET,
+	 POTTED_BIRCH_SAPLING,
+	 POTTED_BLUE_ORCHID,
+	 POTTED_BROWN_MUSHROOM,
+	 POTTED_CACTUS,
+	 POTTED_DANDELION,
+	 POTTED_DARK_OAK_SAPLING,
+	 POTTED_DEAD_BUSH,
+	 POTTED_FERN,
+	 POTTED_JUNGLE_SAPLING,
+	 POTTED_OAK_SAPLING,
+	 POTTED_ORANGE_TULIP,
+	 POTTED_OXEYE_DAISY,
+	 POTTED_PINK_TULIP,
+	 POTTED_POPPY,
+	 POTTED_RED_MUSHROOM,
+	 POTTED_RED_TULIP,
+	 POTTED_SPRUCE_SAPLING,
+	 POTTED_WHITE_TULIP,
+	 POWERED_RAIL,
+	 PRISMARINE,
+	 PRISMARINE_BRICKS,
+	 PRISMARINE_BRICKS_SLAB,
+	 PRISMARINE_BRICKS_STAIRS,
+	 PRISMARINE_CRYSTALS,
+	 PRISMARINE_SHARD,
+	 PRISMARINE_SLAB,
+	 PRISMARINE_STAIRS,
+	 PUFFERFISH,
+	 PUFFERFISH_BUCKET,
+	 PUFFER_FISH_SPAWN_EGG,
+	 PUMPKIN,
+	 PUMPKIN_PIE,
+	 PUMPKIN_SEEDS,
+	 PUMPKIN_STEM,
+	 PURPLE_BANNER,
+	 PURPLE_BED,
+	 PURPLE_CARPET,
+	 PURPLE_CONCRETE,
+	 PURPLE_CONCRETE_POWDER,
+	 PURPLE_DYE,
+	 PURPLE_GLAZED_TERRACOTTA,
+	 PURPLE_SHULKER_BOX,
+	 PURPLE_STAINED_GLASS,
+	 PURPLE_STAINED_GLASS_PANE,
+	 PURPLE_TERRACOTTA,
+	 PURPLE_WALL_BANNER,
+	 PURPLE_WOOL,
+	 PURPUR_BLOCK,
+	 PURPUR_PILLAR,
+	 PURPUR_SLAB,
+	 PURPUR_STAIRS,
+	 QUARTZ,
+	 QUARTZ_BLOCK,
+	 QUARTZ_PILLAR,
+	 QUARTZ_SLAB,
+	 QUARTZ_STAIRS,
+	 RABBIT,
+	 RABBIT_FOOT,
+	 RABBIT_HIDE,
+	 RABBIT_SPAWN_EGG,
+	 RABBIT_STEW,
+	 RAIL,
+	 REDSTONE,
+	 REDSTONE_BLOCK,
+	 REDSTONE_LAMP,
+	 REDSTONE_ORE,
+	 REDSTONE_TORCH,
+	 REDSTONE_WALL_TORCH,
+	 REDSTONE_WIRE,
+	 RED_BANNER,
+	 RED_BED,
+	 RED_CARPET,
+	 RED_CONCRETE,
+	 RED_CONCRETE_POWDER,
+	 RED_GLAZED_TERRACOTTA,
+	 RED_MUSHROOM,
+	 RED_MUSHROOM_BLOCK,
+	 RED_NETHER_BRICKS,
+	 RED_SAND,
+	 RED_SANDSTONE,
+	 RED_SANDSTONE_SLAB,
+	 RED_SANDSTONE_STAIRS,
+	 RED_SHULKER_BOX,
+	 RED_STAINED_GLASS,
+	 RED_STAINED_GLASS_PANE,
+	 RED_TERRACOTTA,
+	 RED_TULIP,
+	 RED_WALL_BANNER,
+	 RED_WOOL,
+	 REPEATER,
+	 REPEATING_COMMAND_BLOCK,
+	 ROSE_BUSH,
+	 ROSE_RED,
+	 ROTTEN_FLESH,
+	 SADDLE,
+	 SALMON,
+	 SALMON_BUCKET,
+	 SALMON_MOB_SPAWN_EGG,
+	 SAND,
+	 SANDSTONE,
+	 SANDSTONE_SLAB,
+	 SANDSTONE_STAIRS,
+	 SCUTE,
+	 SEA_GRASS,
+	 SEA_LANTERN,
+	 SEA_PICKLE,
+	 SHEARS,
+	 SHEEP_SPAWN_EGG,
+	 SHIELD,
+	 SHULKER_BOX,
+	 SHULKER_SHELL,
+	 SHULKER_SPAWN_EGG,
+	 SIGN,
+	 SILVERFISH_SPAWN_EGG,
+	 SKELETON_HORSE_SPAWN_EGG,
+	 SKELETON_SKULL,
+	 SKELETON_SPAWN_EGG,
+	 SKELETON_WALL_SKULL,
+	 SLIME_BALL,
+	 SLIME_BLOCK,
+	 SLIME_SPAWN_EGG,
+	 SMOOTH_QUARTZ,
+	 SMOOTH_RED_SANDSTONE,
+	 SMOOTH_SANDSTONE,
+	 SMOOTH_STONE,
+	 SNOW,
+	 SNOWBALL,
+	 SNOW_BLOCK,
+	 SOUL_SAND,
+	 SPECKLED_MELON,
+	 SPECTRAL_ARROW,
+	 SPIDER_EYE,
+	 SPIDER_SPAWN_EGG,
+	 SPLASH_POTION,
+	 SPONGE,
+	 SPRUCE_BARK,
+	 SPRUCE_BOAT,
+	 SPRUCE_BUTTON,
+	 SPRUCE_DOOR,
+	 SPRUCE_FENCE,
+	 SPRUCE_FENCE_GATE,
+	 SPRUCE_LEAVES,
+	 SPRUCE_LOG,
+	 SPRUCE_PLANKS,
+	 SPRUCE_PRESSURE_PLATE,
+	 SPRUCE_SAPLING,
+	 SPRUCE_SLAB,
+	 SPRUCE_STAIRS,
+	 SPRUCE_TRAPDOOR,
+	 SQUID_SPAWN_EGG,
+	 STICK,
+	 STICKY_PISTON,
+	 STONE,
+	 STONE_AXE,
+	 STONE_BRICKS,
+	 STONE_BRICK_SLAB,
+	 STONE_BRICK_STAIRS,
+	 STONE_BUTTON,
+	 STONE_HOE,
+	 STONE_PICKAXE,
+	 STONE_PRESSURE_PLATE,
+	 STONE_SHOVEL,
+	 STONE_SLAB,
+	 STONE_SWORD,
+	 STRAY_SPAWN_EGG,
+	 STRING,
+	 STRIPPED_ACACIA_LOG,
+	 STRIPPED_BIRCH_LOG,
+	 STRIPPED_DARK_OAK_LOG,
+	 STRIPPED_JUNGLE_LOG,
+	 STRIPPED_OAK_LOG,
+	 STRIPPED_SPRUCE_LOG,
+	 STRUCTURE_BLOCK,
+	 STRUCTURE_VOID,
+	 SUGAR,
+	 SUGAR_CANE,
+	 SUNFLOWER,
+	 TALL_GRASS,
+	 TALL_SEA_GRASS,
+	 TERRACOTTA,
+	 TIPPED_ARROW,
+	 TNT,
+	 TNT_MINECART,
+	 TORCH,
+	 TOTEM_OF_UNDYING,
+	 TRAPPED_CHEST,
+	 TRIDENT,
+	 TRIPWIRE,
+	 TRIPWIRE_HOOK,
+	 TROPICAL_FISH_SPAWN_EGG,
+	 TUBE_CORAL,
+	 TUBE_CORAL_BLOCK,
+	 TUBE_CORAL_FAN,
+	 TURTLE_EGG,
+	 TURTLE_HELMET,
+	 TURTLE_SPAWN_EGG,
+	 VEX_SPAWN_EGG,
+	 VILLAGER_SPAWN_EGG,
+	 VINDICATION_ILLAGER_SPAWN_EGG,
+	 VINE,
+	 VOID_AIR,
+	 WALL_SIGN,
+	 WALL_TORCH,
+	 WATER,
+	 WATER_BUCKET,
+	 WET_SPONGE,
+	 WHEAT,
+	 WHEAT_SEEDS,
+	 WHITE_BANNER,
+	 WHITE_BED,
+	 WHITE_CARPET,
+	 WHITE_CONCRETE,
+	 WHITE_CONCRETE_POWDER,
+	 WHITE_GLAZED_TERRACOTTA,
+	 WHITE_SHULKER_BOX,
+	 WHITE_STAINED_GLASS,
+	 WHITE_STAINED_GLASS_PANE,
+	 WHITE_TERRACOTTA,
+	 WHITE_TULIP,
+	 WHITE_WALL_BANNER,
+	 WHITE_WOOL,
+	 WITCH_SPAWN_EGG,
+	 WITHER_SKELETON_SKULL,
+	 WITHER_SKELETON_SPAWN_EGG,
+	 WITHER_SKELETON_WALL_SKULL,
+	 WOLF_SPAWN_EGG,
+	 WOODEN_AXE,
+	 WOODEN_HOE,
+	 WOODEN_PICKAXE,
+	 WOODEN_SHOVEL,
+	 WOODEN_SWORD,
+	 WRITABLE_BOOK,
+	 WRITTEN_BOOK,
+	 YELLOW_BANNER,
+	 YELLOW_BED,
+	 YELLOW_CARPET,
+	 YELLOW_CONCRETE,
+	 YELLOW_CONCRETE_POWDER,
+	 YELLOW_GLAZED_TERRACOTTA,
+	 YELLOW_SHULKER_BOX,
+	 YELLOW_STAINED_GLASS,
+	 YELLOW_STAINED_GLASS_PANE,
+	 YELLOW_TERRACOTTA,
+	 YELLOW_WALL_BANNER,
+	 YELLOW_WOOL,
+	 ZOMBIE_HEAD,
+	 ZOMBIE_HORSE_SPAWN_EGG,
+	 ZOMBIE_PIGMAN_SPAWN_EGG,
+	 ZOMBIE_SPAWN_EGG,
+	 ZOMBIE_VILLAGER_SPAWN_EGG,
+	 ZOMBIE_WALL_HEAD;
+	
+	public boolean isBlock() {
+        switch (this) {
+            case ACACIA_BARK:
+            case ACACIA_BUTTON:
+            case ACACIA_DOOR:
+            case ACACIA_FENCE:
+            case ACACIA_FENCE_GATE:
+            case ACACIA_LEAVES:
+            case ACACIA_LOG:
+            case ACACIA_PLANKS:
+            case ACACIA_PRESSURE_PLATE:
+            case ACACIA_SAPLING:
+            case ACACIA_SLAB:
+            case ACACIA_STAIRS:
+            case ACACIA_TRAPDOOR:
+            case ACTIVATOR_RAIL:
+            case AIR:
+            case ALLIUM:
+            case ANDESITE:
+            case ANVIL:
+            case ATTACHED_MELON_STEM:
+            case ATTACHED_PUMPKIN_STEM:
+            case AZURE_BLUET:
+            case BARRIER:
+            case BEACON:
+            case BEDROCK:
+            case BEETROOTS:
+            case BIRCH_BARK:
+            case BIRCH_BUTTON:
+            case BIRCH_DOOR:
+            case BIRCH_FENCE:
+            case BIRCH_FENCE_GATE:
+            case BIRCH_LEAVES:
+            case BIRCH_LOG:
+            case BIRCH_PLANKS:
+            case BIRCH_PRESSURE_PLATE:
+            case BIRCH_SAPLING:
+            case BIRCH_SLAB:
+            case BIRCH_STAIRS:
+            case BIRCH_TRAPDOOR:
+            case BLACK_BANNER:
+            case BLACK_BED:
+            case BLACK_CARPET:
+            case BLACK_CONCRETE:
+            case BLACK_CONCRETE_POWDER:
+            case BLACK_GLAZED_TERRACOTTA:
+            case BLACK_SHULKER_BOX:
+            case BLACK_STAINED_GLASS:
+            case BLACK_STAINED_GLASS_PANE:
+            case BLACK_TERRACOTTA:
+            case BLACK_WALL_BANNER:
+            case BLACK_WOOL:
+            case BLUE_BANNER:
+            case BLUE_BED:
+            case BLUE_CARPET:
+            case BLUE_CONCRETE:
+            case BLUE_CONCRETE_POWDER:
+            case BLUE_GLAZED_TERRACOTTA:
+            case BLUE_ICE:
+            case BLUE_ORCHID:
+            case BLUE_SHULKER_BOX:
+            case BLUE_STAINED_GLASS:
+            case BLUE_STAINED_GLASS_PANE:
+            case BLUE_TERRACOTTA:
+            case BLUE_WALL_BANNER:
+            case BLUE_WOOL:
+            case BONE_BLOCK:
+            case BOOKSHELF:
+            case BRAIN_CORAL:
+            case BRAIN_CORAL_BLOCK:
+            case BRAIN_CORAL_FAN:
+            case BREWING_STAND:
+            case BRICKS:
+            case BRICK_SLAB:
+            case BRICK_STAIRS:
+            case BROWN_BANNER:
+            case BROWN_BED:
+            case BROWN_CARPET:
+            case BROWN_CONCRETE:
+            case BROWN_CONCRETE_POWDER:
+            case BROWN_GLAZED_TERRACOTTA:
+            case BROWN_MUSHROOM:
+            case BROWN_MUSHROOM_BLOCK:
+            case BROWN_SHULKER_BOX:
+            case BROWN_STAINED_GLASS:
+            case BROWN_STAINED_GLASS_PANE:
+            case BROWN_TERRACOTTA:
+            case BROWN_WALL_BANNER:
+            case BROWN_WOOL:
+            case BUBBLE_COLUMN:
+            case BUBBLE_CORAL:
+            case BUBBLE_CORAL_BLOCK:
+            case BUBBLE_CORAL_FAN:
+            case CACTUS:
+            case CAKE:
+            case CARROTS:
+            case CARVED_PUMPKIN:
+            case CAULDRON:
+            case CAVE_AIR:
+            case CHAIN_COMMAND_BLOCK:
+            case CHEST:
+            case CHIPPED_ANVIL:
+            case CHISELED_QUARTZ_BLOCK:
+            case CHISELED_RED_SANDSTONE:
+            case CHISELED_SANDSTONE:
+            case CHISELED_STONE_BRICKS:
+            case CHORUS_FLOWER:
+            case CHORUS_PLANT:
+            case CLAY:
+            case COAL_BLOCK:
+            case COAL_ORE:
+            case COARSE_DIRT:
+            case COBBLESTONE:
+            case COBBLESTONE_SLAB:
+            case COBBLESTONE_STAIRS:
+            case COBBLESTONE_WALL:
+            case COBWEB:
+            case COCOA:
+            case COMMAND_BLOCK:
+            case COMPARATOR:
+            case CONDUIT:
+            case CRACKED_STONE_BRICKS:
+            case CRAFTING_TABLE:
+            case CREEPER_HEAD:
+            case CREEPER_WALL_HEAD:
+            case CUT_RED_SANDSTONE:
+            case CUT_SANDSTONE:
+            case CYAN_BANNER:
+            case CYAN_BED:
+            case CYAN_CARPET:
+            case CYAN_CONCRETE:
+            case CYAN_CONCRETE_POWDER:
+            case CYAN_GLAZED_TERRACOTTA:
+            case CYAN_SHULKER_BOX:
+            case CYAN_STAINED_GLASS:
+            case CYAN_STAINED_GLASS_PANE:
+            case CYAN_TERRACOTTA:
+            case CYAN_WALL_BANNER:
+            case CYAN_WOOL:
+            case DAMAGED_ANVIL:
+            case DANDELION:
+            case DARK_OAK_BARK:
+            case DARK_OAK_BUTTON:
+            case DARK_OAK_DOOR:
+            case DARK_OAK_FENCE:
+            case DARK_OAK_FENCE_GATE:
+            case DARK_OAK_LEAVES:
+            case DARK_OAK_LOG:
+            case DARK_OAK_PLANKS:
+            case DARK_OAK_PRESSURE_PLATE:
+            case DARK_OAK_SAPLING:
+            case DARK_OAK_SLAB:
+            case DARK_OAK_STAIRS:
+            case DARK_OAK_TRAPDOOR:
+            case DARK_PRISMARINE:
+            case DARK_PRISMARINE_SLAB:
+            case DARK_PRISMARINE_STAIRS:
+            case DAYLIGHT_DETECTOR:
+            case DEAD_BRAIN_CORAL_BLOCK:
+            case DEAD_BUBBLE_CORAL_BLOCK:
+            case DEAD_BUSH:
+            case DEAD_FIRE_CORAL_BLOCK:
+            case DEAD_HORN_CORAL_BLOCK:
+            case DEAD_TUBE_CORAL_BLOCK:
+            case DETECTOR_RAIL:
+            case DIAMOND_BLOCK:
+            case DIAMOND_ORE:
+            case DIORITE:
+            case DIRT:
+            case DISPENSER:
+            case DRAGON_EGG:
+            case DRAGON_HEAD:
+            case DRAGON_WALL_HEAD:
+            case DRIED_KELP_BLOCK:
+            case DROPPER:
+            case EMERALD_BLOCK:
+            case EMERALD_ORE:
+            case ENCHANTING_TABLE:
+            case ENDER_CHEST:
+            case END_GATEWAY:
+            case END_PORTAL:
+            case END_PORTAL_FRAME:
+            case END_ROD:
+            case END_STONE:
+            case END_STONE_BRICKS:
+            case FARMLAND:
+            case FERN:
+            case FIRE:
+            case FIRE_CORAL:
+            case FIRE_CORAL_BLOCK:
+            case FIRE_CORAL_FAN:
+            case FLOWER_POT:
+            case FROSTED_ICE:
+            case FURNACE:
+            case GLASS:
+            case GLASS_PANE:
+            case GLOWSTONE:
+            case GOLD_BLOCK:
+            case GOLD_ORE:
+            case GRANITE:
+            case GRASS:
+            case GRASS_BLOCK:
+            case GRASS_PATH:
+            case GRAVEL:
+            case GRAY_BANNER:
+            case GRAY_BED:
+            case GRAY_CARPET:
+            case GRAY_CONCRETE:
+            case GRAY_CONCRETE_POWDER:
+            case GRAY_GLAZED_TERRACOTTA:
+            case GRAY_SHULKER_BOX:
+            case GRAY_STAINED_GLASS:
+            case GRAY_STAINED_GLASS_PANE:
+            case GRAY_TERRACOTTA:
+            case GRAY_WALL_BANNER:
+            case GRAY_WOOL:
+            case GREEN_BANNER:
+            case GREEN_BED:
+            case GREEN_CARPET:
+            case GREEN_CONCRETE:
+            case GREEN_CONCRETE_POWDER:
+            case GREEN_GLAZED_TERRACOTTA:
+            case GREEN_SHULKER_BOX:
+            case GREEN_STAINED_GLASS:
+            case GREEN_STAINED_GLASS_PANE:
+            case GREEN_TERRACOTTA:
+            case GREEN_WALL_BANNER:
+            case GREEN_WOOL:
+            case HAY_BLOCK:
+            case HEAVY_WEIGHTED_PRESSURE_PLATE:
+            case HOPPER:
+            case HORN_CORAL:
+            case HORN_CORAL_BLOCK:
+            case HORN_CORAL_FAN:
+            case ICE:
+            case INFESTED_CHISELED_STONE_BRICKS:
+            case INFESTED_COBBLESTONE:
+            case INFESTED_CRACKED_STONE_BRICKS:
+            case INFESTED_MOSSY_STONE_BRICKS:
+            case INFESTED_STONE:
+            case INFESTED_STONE_BRICKS:
+            case IRON_BARS:
+            case IRON_BLOCK:
+            case IRON_DOOR:
+            case IRON_ORE:
+            case IRON_TRAPDOOR:
+            case JACK_O_LANTERN:
+            case JUKEBOX:
+            case JUNGLE_BARK:
+            case JUNGLE_BUTTON:
+            case JUNGLE_DOOR:
+            case JUNGLE_FENCE:
+            case JUNGLE_FENCE_GATE:
+            case JUNGLE_LEAVES:
+            case JUNGLE_LOG:
+            case JUNGLE_PLANKS:
+            case JUNGLE_PRESSURE_PLATE:
+            case JUNGLE_SAPLING:
+            case JUNGLE_SLAB:
+            case JUNGLE_STAIRS:
+            case JUNGLE_TRAPDOOR:
+            case KELP:
+            case KELP_PLANT:
+            case LADDER:
+            case LAPIS_BLOCK:
+            case LAPIS_ORE:
+            case LARGE_FERN:
+            case LAVA:
+            case LEVER:
+            case LIGHT_BLUE_BANNER:
+            case LIGHT_BLUE_BED:
+            case LIGHT_BLUE_CARPET:
+            case LIGHT_BLUE_CONCRETE:
+            case LIGHT_BLUE_CONCRETE_POWDER:
+            case LIGHT_BLUE_GLAZED_TERRACOTTA:
+            case LIGHT_BLUE_SHULKER_BOX:
+            case LIGHT_BLUE_STAINED_GLASS:
+            case LIGHT_BLUE_STAINED_GLASS_PANE:
+            case LIGHT_BLUE_TERRACOTTA:
+            case LIGHT_BLUE_WALL_BANNER:
+            case LIGHT_BLUE_WOOL:
+            case LIGHT_GRAY_BANNER:
+            case LIGHT_GRAY_BED:
+            case LIGHT_GRAY_CARPET:
+            case LIGHT_GRAY_CONCRETE:
+            case LIGHT_GRAY_CONCRETE_POWDER:
+            case LIGHT_GRAY_GLAZED_TERRACOTTA:
+            case LIGHT_GRAY_SHULKER_BOX:
+            case LIGHT_GRAY_STAINED_GLASS:
+            case LIGHT_GRAY_STAINED_GLASS_PANE:
+            case LIGHT_GRAY_TERRACOTTA:
+            case LIGHT_GRAY_WALL_BANNER:
+            case LIGHT_GRAY_WOOL:
+            case LIGHT_WEIGHTED_PRESSURE_PLATE:
+            case LILAC:
+            case LILY_PAD:
+            case LIME_BANNER:
+            case LIME_BED:
+            case LIME_CARPET:
+            case LIME_CONCRETE:
+            case LIME_CONCRETE_POWDER:
+            case LIME_GLAZED_TERRACOTTA:
+            case LIME_SHULKER_BOX:
+            case LIME_STAINED_GLASS:
+            case LIME_STAINED_GLASS_PANE:
+            case LIME_TERRACOTTA:
+            case LIME_WALL_BANNER:
+            case LIME_WOOL:
+            case MAGENTA_BANNER:
+            case MAGENTA_BED:
+            case MAGENTA_CARPET:
+            case MAGENTA_CONCRETE:
+            case MAGENTA_CONCRETE_POWDER:
+            case MAGENTA_GLAZED_TERRACOTTA:
+            case MAGENTA_SHULKER_BOX:
+            case MAGENTA_STAINED_GLASS:
+            case MAGENTA_STAINED_GLASS_PANE:
+            case MAGENTA_TERRACOTTA:
+            case MAGENTA_WALL_BANNER:
+            case MAGENTA_WOOL:
+            case MAGMA_BLOCK:
+            case MELON:
+            case MELON_STEM:
+            case MOB_SPAWNER:
+            case MOSSY_COBBLESTONE:
+            case MOSSY_COBBLESTONE_WALL:
+            case MOSSY_STONE_BRICKS:
+            case MOVING_PISTON:
+            case MUSHROOM_STEM:
+            case MYCELIUM:
+            case NETHERRACK:
+            case NETHER_BRICKS:
+            case NETHER_BRICK_FENCE:
+            case NETHER_BRICK_SLAB:
+            case NETHER_BRICK_STAIRS:
+            case NETHER_QUARTZ_ORE:
+            case NETHER_WART:
+            case NETHER_WART_BLOCK:
+            case NOTE_BLOCK:
+            case OAK_BARK:
+            case OAK_BUTTON:
+            case OAK_DOOR:
+            case OAK_FENCE:
+            case OAK_FENCE_GATE:
+            case OAK_LEAVES:
+            case OAK_LOG:
+            case OAK_PLANKS:
+            case OAK_PRESSURE_PLATE:
+            case OAK_SAPLING:
+            case OAK_SLAB:
+            case OAK_STAIRS:
+            case OAK_TRAPDOOR:
+            case OBSERVER:
+            case OBSIDIAN:
+            case ORANGE_BANNER:
+            case ORANGE_BED:
+            case ORANGE_CARPET:
+            case ORANGE_CONCRETE:
+            case ORANGE_CONCRETE_POWDER:
+            case ORANGE_GLAZED_TERRACOTTA:
+            case ORANGE_SHULKER_BOX:
+            case ORANGE_STAINED_GLASS:
+            case ORANGE_STAINED_GLASS_PANE:
+            case ORANGE_TERRACOTTA:
+            case ORANGE_TULIP:
+            case ORANGE_WALL_BANNER:
+            case ORANGE_WOOL:
+            case OXEYE_DAISY:
+            case PACKED_ICE:
+            case PEONY:
+            case PETRIFIED_OAK_SLAB:
+            case PINK_BANNER:
+            case PINK_BED:
+            case PINK_CARPET:
+            case PINK_CONCRETE:
+            case PINK_CONCRETE_POWDER:
+            case PINK_GLAZED_TERRACOTTA:
+            case PINK_SHULKER_BOX:
+            case PINK_STAINED_GLASS:
+            case PINK_STAINED_GLASS_PANE:
+            case PINK_TERRACOTTA:
+            case PINK_TULIP:
+            case PINK_WALL_BANNER:
+            case PINK_WOOL:
+            case PISTON:
+            case PISTON_HEAD:
+            case PLAYER_HEAD:
+            case PLAYER_WALL_HEAD:
+            case PODZOL:
+            case POLISHED_ANDESITE:
+            case POLISHED_DIORITE:
+            case POLISHED_GRANITE:
+            case POPPY:
+            case PORTAL:
+            case POTATOES:
+            case POTTED_ACACIA_SAPLING:
+            case POTTED_ALLIUM:
+            case POTTED_AZURE_BLUET:
+            case POTTED_BIRCH_SAPLING:
+            case POTTED_BLUE_ORCHID:
+            case POTTED_BROWN_MUSHROOM:
+            case POTTED_CACTUS:
+            case POTTED_DANDELION:
+            case POTTED_DARK_OAK_SAPLING:
+            case POTTED_DEAD_BUSH:
+            case POTTED_FERN:
+            case POTTED_JUNGLE_SAPLING:
+            case POTTED_OAK_SAPLING:
+            case POTTED_ORANGE_TULIP:
+            case POTTED_OXEYE_DAISY:
+            case POTTED_PINK_TULIP:
+            case POTTED_POPPY:
+            case POTTED_RED_MUSHROOM:
+            case POTTED_RED_TULIP:
+            case POTTED_SPRUCE_SAPLING:
+            case POTTED_WHITE_TULIP:
+            case POWERED_RAIL:
+            case PRISMARINE:
+            case PRISMARINE_BRICKS:
+            case PRISMARINE_BRICKS_SLAB:
+            case PRISMARINE_BRICKS_STAIRS:
+            case PRISMARINE_SLAB:
+            case PRISMARINE_STAIRS:
+            case PUMPKIN:
+            case PUMPKIN_STEM:
+            case PURPLE_BANNER:
+            case PURPLE_BED:
+            case PURPLE_CARPET:
+            case PURPLE_CONCRETE:
+            case PURPLE_CONCRETE_POWDER:
+            case PURPLE_GLAZED_TERRACOTTA:
+            case PURPLE_SHULKER_BOX:
+            case PURPLE_STAINED_GLASS:
+            case PURPLE_STAINED_GLASS_PANE:
+            case PURPLE_TERRACOTTA:
+            case PURPLE_WALL_BANNER:
+            case PURPLE_WOOL:
+            case PURPUR_BLOCK:
+            case PURPUR_PILLAR:
+            case PURPUR_SLAB:
+            case PURPUR_STAIRS:
+            case QUARTZ_BLOCK:
+            case QUARTZ_PILLAR:
+            case QUARTZ_SLAB:
+            case QUARTZ_STAIRS:
+            case RAIL:
+            case REDSTONE_BLOCK:
+            case REDSTONE_LAMP:
+            case REDSTONE_ORE:
+            case REDSTONE_TORCH:
+            case REDSTONE_WALL_TORCH:
+            case REDSTONE_WIRE:
+            case RED_BANNER:
+            case RED_BED:
+            case RED_CARPET:
+            case RED_CONCRETE:
+            case RED_CONCRETE_POWDER:
+            case RED_GLAZED_TERRACOTTA:
+            case RED_MUSHROOM:
+            case RED_MUSHROOM_BLOCK:
+            case RED_NETHER_BRICKS:
+            case RED_SAND:
+            case RED_SANDSTONE:
+            case RED_SANDSTONE_SLAB:
+            case RED_SANDSTONE_STAIRS:
+            case RED_SHULKER_BOX:
+            case RED_STAINED_GLASS:
+            case RED_STAINED_GLASS_PANE:
+            case RED_TERRACOTTA:
+            case RED_TULIP:
+            case RED_WALL_BANNER:
+            case RED_WOOL:
+            case REPEATER:
+            case REPEATING_COMMAND_BLOCK:
+            case ROSE_BUSH:
+            case SAND:
+            case SANDSTONE:
+            case SANDSTONE_SLAB:
+            case SANDSTONE_STAIRS:
+            case SEA_GRASS:
+            case SEA_LANTERN:
+            case SEA_PICKLE:
+            case SHULKER_BOX:
+            case SIGN:
+            case SKELETON_SKULL:
+            case SKELETON_WALL_SKULL:
+            case SLIME_BLOCK:
+            case SMOOTH_QUARTZ:
+            case SMOOTH_RED_SANDSTONE:
+            case SMOOTH_SANDSTONE:
+            case SMOOTH_STONE:
+            case SNOW:
+            case SNOW_BLOCK:
+            case SOUL_SAND:
+            case SPONGE:
+            case SPRUCE_BARK:
+            case SPRUCE_BUTTON:
+            case SPRUCE_DOOR:
+            case SPRUCE_FENCE:
+            case SPRUCE_FENCE_GATE:
+            case SPRUCE_LEAVES:
+            case SPRUCE_LOG:
+            case SPRUCE_PLANKS:
+            case SPRUCE_PRESSURE_PLATE:
+            case SPRUCE_SAPLING:
+            case SPRUCE_SLAB:
+            case SPRUCE_STAIRS:
+            case SPRUCE_TRAPDOOR:
+            case STICKY_PISTON:
+            case STONE:
+            case STONE_BRICKS:
+            case STONE_BRICK_SLAB:
+            case STONE_BRICK_STAIRS:
+            case STONE_BUTTON:
+            case STONE_PRESSURE_PLATE:
+            case STONE_SLAB:
+            case STRIPPED_ACACIA_LOG:
+            case STRIPPED_BIRCH_LOG:
+            case STRIPPED_DARK_OAK_LOG:
+            case STRIPPED_JUNGLE_LOG:
+            case STRIPPED_OAK_LOG:
+            case STRIPPED_SPRUCE_LOG:
+            case STRUCTURE_BLOCK:
+            case STRUCTURE_VOID:
+            case SUGAR_CANE:
+            case SUNFLOWER:
+            case TALL_GRASS:
+            case TALL_SEA_GRASS:
+            case TERRACOTTA:
+            case TNT:
+            case TORCH:
+            case TRAPPED_CHEST:
+            case TRIPWIRE:
+            case TRIPWIRE_HOOK:
+            case TUBE_CORAL:
+            case TUBE_CORAL_BLOCK:
+            case TUBE_CORAL_FAN:
+            case TURTLE_EGG:
+            case VINE:
+            case VOID_AIR:
+            case WALL_SIGN:
+            case WALL_TORCH:
+            case WATER:
+            case WET_SPONGE:
+            case WHEAT:
+            case WHITE_BANNER:
+            case WHITE_BED:
+            case WHITE_CARPET:
+            case WHITE_CONCRETE:
+            case WHITE_CONCRETE_POWDER:
+            case WHITE_GLAZED_TERRACOTTA:
+            case WHITE_SHULKER_BOX:
+            case WHITE_STAINED_GLASS:
+            case WHITE_STAINED_GLASS_PANE:
+            case WHITE_TERRACOTTA:
+            case WHITE_TULIP:
+            case WHITE_WALL_BANNER:
+            case WHITE_WOOL:
+            case WITHER_SKELETON_SKULL:
+            case WITHER_SKELETON_WALL_SKULL:
+            case YELLOW_BANNER:
+            case YELLOW_BED:
+            case YELLOW_CARPET:
+            case YELLOW_CONCRETE:
+            case YELLOW_CONCRETE_POWDER:
+            case YELLOW_GLAZED_TERRACOTTA:
+            case YELLOW_SHULKER_BOX:
+            case YELLOW_STAINED_GLASS:
+            case YELLOW_STAINED_GLASS_PANE:
+            case YELLOW_TERRACOTTA:
+            case YELLOW_WALL_BANNER:
+            case YELLOW_WOOL:
+            case ZOMBIE_HEAD:
+            case ZOMBIE_WALL_HEAD:
+                return true;
+            default:
+                return false;
+        }
+    }
+}
