@@ -1,4 +1,4 @@
-package net.gunivers.cmdloader.keys.structure.types;
+package net.gunivers.cmdloader.keys.structure.classes;
 
 import java.io.IOException;
 import java.io.StringReader;
@@ -12,7 +12,8 @@ import org.json.simple.parser.ParseException;
 
 import net.gunivers.cmdloader.keys.Key.KeyInstance;
 import net.gunivers.cmdloader.keys.keys.KeyRegister;
-import net.gunivers.cmdloader.keys.structure.interfaces.Parsable;
+import net.gunivers.cmdloader.keys.structure.enums.ValueType;
+import net.gunivers.cmdloader.keys.structure.interfaces.Parser;
 
 /**
  * 
@@ -20,13 +21,13 @@ import net.gunivers.cmdloader.keys.structure.interfaces.Parsable;
  *
  */
 @SuppressWarnings("rawtypes")
-public class Compound implements Parsable<KeyInstance[]>
+public class Compound implements Parser<KeyInstance[], KeyInstance<?>>
 {
 	private final ArrayList<KeyInstance<Object>> keys = new ArrayList<>();
-
+	
 	@SuppressWarnings("unchecked")
 	@Override
-	public KeyInstance[] parse(String string)
+	public KeyInstance[] parse(String string, KeyInstance<?> source)
 	{
 		string = "{" + string + "}";
 		
@@ -43,7 +44,7 @@ public class Compound implements Parsable<KeyInstance[]>
 		
 		for (Entry<String, ?> entry : hm.entrySet())
 		{
-			keys.add(KeyRegister.keys.get(entry.getKey()).newInstance(entry.getValue()));
+			keys.add(KeyRegister.keys.get(entry.getKey()).newInstance(entry.getValue(), new Context(source, ValueType.Compound, string)));
 		}
 		
 		this.keys.clear();

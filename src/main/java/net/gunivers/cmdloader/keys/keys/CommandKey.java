@@ -6,8 +6,10 @@ import com.mojang.brigadier.CommandDispatcher;
 
 import net.gunivers.cmdloader.keys.Key;
 import net.gunivers.cmdloader.keys.structure.abstracts.CompoundKey;
+import net.gunivers.cmdloader.keys.structure.classes.Compound;
+import net.gunivers.cmdloader.keys.structure.classes.Context;
+import net.gunivers.cmdloader.keys.structure.enums.ValueType;
 import net.gunivers.cmdloader.keys.structure.interfaces.Root;
-import net.gunivers.cmdloader.keys.structure.types.Compound;
 
 /**
  * 
@@ -25,12 +27,12 @@ public class CommandKey extends CompoundKey implements Root
 	public Predicate<Compound> getSubValider() { return (Compound keys) -> this.validateKeys(keys.getCompound()); }
 
 	@Override
-	public KeyInstance<Compound> parse(String value)
+	public KeyInstance<Compound> parse(String value, KeyInstance<?> source)
 	{
 		Compound c = new Compound();
-		c.parse(value);
+		c.parse(value, null);
 		
-		return this.newInstance(c);
+		return this.newInstance(c, new Context(null, ValueType.Unknown, 0, value));
 	}
 
 	@Override

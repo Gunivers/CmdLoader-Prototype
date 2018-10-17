@@ -1,22 +1,22 @@
-package net.gunivers.cmdloader.keys.structure.types;
+package net.gunivers.cmdloader.keys.structure.classes;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import net.gunivers.cmdloader.keys.structure.interfaces.Parsable;
+import net.gunivers.cmdloader.keys.structure.interfaces.Parser;
 
 /**
  * @author A~Z
  */
-public class Array<T> implements Parsable<T[]>
+public class Array<T> implements Parser<T[], Object>
 {
 	private static final String key = "array";
 	T[] array;
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	public T[] parse(String string)
+	public T[] parse(String string, Object source)
 	{
 		string = "{ \""+ key +"\": " + string + "}";
 		

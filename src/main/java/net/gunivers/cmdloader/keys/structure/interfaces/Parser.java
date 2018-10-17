@@ -7,7 +7,7 @@ package net.gunivers.cmdloader.keys.structure.interfaces;
  * @param <T>
  */
 @FunctionalInterface
-public interface Parsable<T>
+public interface Parser<T, S>
 {
-	public T parse(String string);
+	public T parse(String string, S source);
 }

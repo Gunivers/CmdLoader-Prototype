@@ -4,8 +4,8 @@ import java.util.function.Predicate;
 
 import net.gunivers.cmdloader.keys.Key;
 import net.gunivers.cmdloader.keys.structure.interfaces.SubValider;
+import net.gunivers.cmdloader.keys.structure.classes.Compound;
 import net.gunivers.cmdloader.keys.structure.interfaces.KeyContainer;
-import net.gunivers.cmdloader.keys.structure.types.Compound;
 
 /**
  * 

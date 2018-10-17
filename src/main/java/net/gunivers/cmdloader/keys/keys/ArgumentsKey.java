@@ -4,14 +4,15 @@ import java.util.function.Predicate;
 
 import net.gunivers.cmdloader.keys.Key;
 import net.gunivers.cmdloader.keys.structure.abstracts.ArrayKey;
+import net.gunivers.cmdloader.keys.structure.classes.Compound;
 import net.gunivers.cmdloader.keys.structure.interfaces.KeyContainer;
-import net.gunivers.cmdloader.keys.structure.types.Compound;
 
 /**
  * 
  * @author A~Z
  *
  */
+@SuppressWarnings("rawtypes")
 public class ArgumentsKey extends ArrayKey<Compound> implements KeyContainer
 {
 	public ArgumentsKey()
@@ -27,7 +28,7 @@ public class ArgumentsKey extends ArrayKey<Compound> implements KeyContainer
 	}
 
 	@Override
-	public KeyInstance<Compound[]> parse(String value)
+	public KeyInstance<Compound[]> parse(String value, KeyInstance<?> source)
 	{
 		// TODO Auto-generated method stub
 		return null;

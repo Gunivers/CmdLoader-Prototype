@@ -3,6 +3,8 @@ package net.gunivers.cmdloader.keys.keys;
 import java.util.function.Predicate;
 
 import net.gunivers.cmdloader.keys.structure.abstracts.SimpleValueKey;
+import net.gunivers.cmdloader.keys.structure.classes.Context;
+import net.gunivers.cmdloader.keys.structure.enums.ValueType;
 
 /**
  * 
@@ -23,9 +25,9 @@ public class DescriptionKey extends SimpleValueKey<String>
 	}
 
 	@Override
-	public KeyInstance<String> parse(String value)
+	public KeyInstance<String> parse(String value, KeyInstance<?> source)
 	{
-		return this.newInstance(value);
+		return this.newInstance(value, new Context(source, ValueType.Unknown, value));
 	}
 
 	@Override

@@ -5,7 +5,8 @@ import java.util.HashMap;
 import java.util.Set;
 import java.util.function.Predicate;
 
-import net.gunivers.cmdloader.keys.structure.interfaces.Parsable;
+import net.gunivers.cmdloader.keys.structure.classes.Context;
+import net.gunivers.cmdloader.keys.structure.interfaces.Parser;
 
 /**
  * 
@@ -15,17 +16,16 @@ import net.gunivers.cmdloader.keys.structure.interfaces.Parsable;
  *           The type of held value
  */
 @SuppressWarnings("unchecked")
-public abstract class Key<T> implements Parsable<Key.KeyInstance<T>>
+public abstract class Key<T> implements Parser<Key.KeyInstance<T>, Key.KeyInstance<?>>
 {
 	private final static HashMap<String, Key<?>> keys = new HashMap<>();
 
+	protected final String name;
+
+	protected T value;
 	protected final boolean isSingleton;
 	
-	protected final String name;
-	protected T value;
-	
 	private Predicate<T> valider;
-	
 	
 	protected Key(String name, T defaultValue, boolean singleton)
 	{
@@ -35,20 +35,21 @@ public abstract class Key<T> implements Parsable<Key.KeyInstance<T>>
 		keys.put(name, this);
 		
 		this.name = name;
+		
 		this.value = defaultValue;
 		this.isSingleton = singleton;
 		
 		this.valider = this.getValider();
 	}
 
-	public KeyInstance<T> newInstance()
+	public KeyInstance<T> newInstance(Context context)
 	{
-		return this.newInstance(value);
+		return this.newInstance(value, context);
 	}
 	
-	public KeyInstance<T> newInstance(T value)
+	public KeyInstance<T> newInstance(T value, Context context)
 	{
-		return new KeyInstance<T>(value, this);
+		return new KeyInstance<T>(value, this, context);
 	}
 	
 	// Static Getters
@@ -77,18 +78,17 @@ public abstract class Key<T> implements Parsable<Key.KeyInstance<T>>
 		private final Key<K> key;
 		private K value;
 		
-		private KeyInstance(Key<K> key)
-		{
-			this(key.value, key);
-		}
+		public final Context context;
 		
-		private KeyInstance(K value, Key<K> key)
+		private KeyInstance(K value, Key<K> key, Context context)
 		{
 			if (key.isSingleton && instances.stream().anyMatch(k -> k.key == key))
 				throw new InstantiationError("Tried to instantiate the singleton Key '" + key + "' 2 times");
 			
 			this.setValue(value);
 			this.key = key;
+			
+			this.context = context;
 		}
 		
 		public void setValue(K value)

@@ -3,6 +3,8 @@ package net.gunivers.cmdloader.keys.keys;
 import java.util.function.Predicate;
 
 import net.gunivers.cmdloader.keys.structure.abstracts.SimpleValueKey;
+import net.gunivers.cmdloader.keys.structure.classes.Context;
+import net.gunivers.cmdloader.keys.structure.enums.ValueType;
 
 /**
  * 
@@ -23,12 +25,9 @@ public class OnlyOpKey extends SimpleValueKey<Boolean>
 	}
 
 	@Override
-	public KeyInstance<Boolean> parse(String value)
+	public KeyInstance<Boolean> parse(String value, KeyInstance<?> source)
 	{
-		if (!(value.equals("true") || value.equals("false")))
-			throw new ClassCastException("Couldn't convert '" + value + "' to boolean");
-		
-		return this.newInstance(Boolean.valueOf(value));
+		return this.newInstance(Boolean.valueOf(value), new Context(source, ValueType.Unknown, value));
 	}
 
 	@Override
