@@ -25,9 +25,9 @@ public class DescriptionKey extends SimpleValueKey<String>
 	}
 
 	@Override
-	public KeyInstance<String> parse(String value, KeyInstance<?> source)
+	public KeyInstance<String> parse(String value)
 	{
-		return this.newInstance(value, new Context(source, ValueType.Unknown, value));
+		return this.newInstance(value, new Context(this, ValueType.Unknown, value));
 	}
 
 	@Override

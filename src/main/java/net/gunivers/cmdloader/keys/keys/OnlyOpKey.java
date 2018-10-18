@@ -25,9 +25,9 @@ public class OnlyOpKey extends SimpleValueKey<Boolean>
 	}
 
 	@Override
-	public KeyInstance<Boolean> parse(String value, KeyInstance<?> source)
+	public KeyInstance<Boolean> parse(String value)
 	{
-		return this.newInstance(Boolean.valueOf(value), new Context(source, ValueType.Unknown, value));
+		return this.newInstance(Boolean.valueOf(value), new Context(this, ValueType.Unknown, value));
 	}
 
 	@Override

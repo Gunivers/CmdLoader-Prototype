@@ -24,19 +24,19 @@ public class CommandKey extends CompoundKey implements Root
 	}
 
 	@Override
-	public Predicate<Compound> getSubValider() { return (Compound keys) -> this.validateKeys(keys.getCompound()); }
+	public Predicate<Compound<CompoundKey>> getSubValider() { return (Compound<CompoundKey> keys) -> this.validateKeys(keys.getCompound()); }
 
 	@Override
-	public KeyInstance<Compound> parse(String value, KeyInstance<?> source)
+	public KeyInstance<Compound<CompoundKey>> parse(String value)
 	{
-		Compound c = new Compound();
-		c.parse(value, null);
+		Compound<CompoundKey> c = new Compound<CompoundKey>(this);
+		c.parse(value);
 		
-		return this.newInstance(c, new Context(null, ValueType.Unknown, 0, value));
+		return this.newInstance(c, new Context(this, ValueType.Compound, 0, value));
 	}
 
 	@Override
-	public boolean trigger(Compound value, KeyInstance<Compound> instance)
+	public boolean trigger(Compound<CompoundKey> value, KeyInstance<Compound<CompoundKey>> instance)
 	{
 		// TODO Auto-generated method stub
 		return false;

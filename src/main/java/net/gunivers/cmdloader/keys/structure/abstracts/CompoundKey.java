@@ -12,7 +12,7 @@ import net.gunivers.cmdloader.keys.structure.interfaces.KeyContainer;
  * @author A~Z
  *
  */
-public abstract class CompoundKey extends Key<Compound> implements SubValider<Compound>, KeyContainer
+public abstract class CompoundKey extends Key<Compound<CompoundKey>> implements SubValider<Compound<CompoundKey>>, KeyContainer
 {
 	private int min = 0;
 	private int max = Integer.MAX_VALUE;
@@ -31,8 +31,8 @@ public abstract class CompoundKey extends Key<Compound> implements SubValider<Co
 	}
 
 	@Override
-	public final Predicate<Compound> getValider()
+	public final Predicate<Compound<CompoundKey>> getValider()
 	{
-		return (Compound k) -> min <= k.size() && k.size() <= max && getSubValider().test(k);
+		return (Compound<CompoundKey> k) -> min <= k.size() && k.size() <= max && getSubValider().test(k);
 	}
 }

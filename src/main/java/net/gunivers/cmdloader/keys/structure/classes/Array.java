@@ -9,14 +9,14 @@ import net.gunivers.cmdloader.keys.structure.interfaces.Parser;
 /**
  * @author A~Z
  */
-public class Array<T> implements Parser<T[], Object>
+public class Array<T> implements Parser<T[]>
 {
 	private static final String key = "array";
 	T[] array;
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	public T[] parse(String string, Object source)
+	public T[] parse(String string)
 	{
 		string = "{ \""+ key +"\": " + string + "}";
 		

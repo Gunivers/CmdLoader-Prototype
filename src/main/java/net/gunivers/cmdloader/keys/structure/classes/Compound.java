@@ -10,6 +10,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import net.gunivers.cmdloader.keys.Key;
 import net.gunivers.cmdloader.keys.Key.KeyInstance;
 import net.gunivers.cmdloader.keys.keys.KeyRegister;
 import net.gunivers.cmdloader.keys.structure.enums.ValueType;
@@ -21,13 +22,19 @@ import net.gunivers.cmdloader.keys.structure.interfaces.Parser;
  *
  */
 @SuppressWarnings("rawtypes")
-public class Compound implements Parser<KeyInstance[], KeyInstance<?>>
+public class Compound<S extends Key<?>> implements Parser<KeyInstance[]>
 {
 	private final ArrayList<KeyInstance<Object>> keys = new ArrayList<>();
+	private final S source;
+	
+	public Compound(S source)
+	{
+		this.source = source;
+	}
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	public KeyInstance[] parse(String string, KeyInstance<?> source)
+	public KeyInstance[] parse(String string)
 	{
 		string = "{" + string + "}";
 		

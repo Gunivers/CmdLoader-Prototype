@@ -16,7 +16,7 @@ import net.gunivers.cmdloader.keys.structure.interfaces.Parser;
  *           The type of held value
  */
 @SuppressWarnings("unchecked")
-public abstract class Key<T> implements Parser<Key.KeyInstance<T>, Key.KeyInstance<?>>
+public abstract class Key<T> implements Parser<Key.KeyInstance<T>>
 {
 	private final static HashMap<String, Key<?>> keys = new HashMap<>();
 

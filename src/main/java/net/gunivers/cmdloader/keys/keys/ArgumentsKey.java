@@ -13,7 +13,7 @@ import net.gunivers.cmdloader.keys.structure.interfaces.KeyContainer;
  *
  */
 @SuppressWarnings("rawtypes")
-public class ArgumentsKey extends ArrayKey<Compound> implements KeyContainer
+public class ArgumentsKey extends ArrayKey<Compound<ArgumentsKey>> implements KeyContainer
 {
 	public ArgumentsKey()
 	{
@@ -21,21 +21,21 @@ public class ArgumentsKey extends ArrayKey<Compound> implements KeyContainer
 	}
 
 	@Override
-	public Predicate<Compound[]> getSubValider()
+	public Predicate<Compound<ArgumentsKey>[]> getSubValider()
 	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public KeyInstance<Compound[]> parse(String value, KeyInstance<?> source)
+	public KeyInstance<Compound<ArgumentsKey>[]> parse(String value)
 	{
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public boolean trigger(Compound[] value, KeyInstance<Compound[]> instance)
+	public boolean trigger(Compound<ArgumentsKey>[] value, KeyInstance<Compound<ArgumentsKey>[]> instance)
 	{
 		// TODO Auto-generated method stub
 		return false;
