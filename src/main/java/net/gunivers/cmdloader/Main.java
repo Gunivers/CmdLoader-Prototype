@@ -40,7 +40,6 @@ public class Main {
 				readJSONArrayAndDisp((JSONArray) entry.getValue(), numberTab + 1); //Sinon, si c'est un JSON Array, on appelle la méthode faite pour les lire
 			else
 				System.out.println(Strings.repeat("\t", numberTab + 1) + entry.getValue()); //Sinon, on print la valeur
-
 		}
 	}
 
