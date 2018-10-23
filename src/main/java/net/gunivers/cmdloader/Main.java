@@ -19,8 +19,6 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 
 import net.gunivers.cmdloader.keys.Key;
 import net.gunivers.cmdloader.keys.keys.KeyRegister;
-import net.gunivers.cmdloader.keys.structure.classes.Context;
-import net.gunivers.cmdloader.keys.structure.enums.ValueType;
 import net.gunivers.cmdloader.keys.structure.exceptions.KeyNotFoundException;
 import net.gunivers.cmdloader.keys.structure.exceptions.KeyNotRootException;
 import net.gunivers.cmdloader.keys.structure.interfaces.Root;
