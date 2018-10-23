@@ -18,13 +18,13 @@ import net.gunivers.cmdloader.keys.structure.interfaces.Root;
  */
 public class CommandKey extends CompoundKey implements Root
 {
-	public CommandKey()
+	protected CommandKey()
 	{
 		super("command", true);
 	}
 
 	@Override
-	public Predicate<Compound<CompoundKey>> getSubValider() { return (Compound<CompoundKey> keys) -> this.validateKeys(keys.getCompound()); }
+	public Predicate<Compound<CompoundKey>> getSubValider() {return (Compound<CompoundKey> keys) -> this.validateKeys(keys.getCompound());}
 
 	@Override
 	public KeyInstance<Compound<CompoundKey>> parse(String value)
@@ -43,9 +43,10 @@ public class CommandKey extends CompoundKey implements Root
 	}
 
 	@Override
-	public <S> void rootAction(CommandDispatcher<S> dispatcher)
+	public <S> void rootAction(CommandDispatcher<S> dispatcher, String raw)
 	{
-		//TODO : rootAction
+	
+		
 		return;
 	}
 

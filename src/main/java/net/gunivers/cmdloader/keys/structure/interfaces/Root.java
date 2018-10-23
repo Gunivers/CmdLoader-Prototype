@@ -9,5 +9,5 @@ import com.mojang.brigadier.CommandDispatcher;
  */
 public interface Root extends KeyContainer
 {
-	public <S> void rootAction(CommandDispatcher<S> dispatcher);
+	public <S> void rootAction(CommandDispatcher<S> dispatcher, String raw);
 }
