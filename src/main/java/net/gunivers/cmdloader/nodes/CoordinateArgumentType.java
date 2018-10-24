@@ -53,12 +53,11 @@ public class CoordinateArgumentType implements ArgumentType<String> {
 
 	@Override
 	public <S> String parse(StringReader reader) throws CommandSyntaxException {
-		StringBuilder prefixe = new StringBuilder(reader.read());
+		String prefixe = String.valueOf(reader.read());
 		String arg = "";
-		System.out.println(prefix.toString() + "|\\.");
-		if(Character.isDigit(prefixe.charAt(0)))
+		if(Character.isDigit(prefixe.charAt(0)) || prefixe.matches("|\\.|-"))
 			reader.setCursor(reader.getCursor() - 1);
-		else if(!prefixe.toString().matches(prefix.toString() + "|\\."))
+		else if(!prefixe.toString().matches(prefix.toString()))
 			throw CommandSyntaxException.BUILT_IN_EXCEPTIONS.doubleTooLow().createWithContext(reader, prefixe, arg);
 		return arg + DoubleArgumentType.doubleArg().parse(reader);
 	}
