@@ -56,7 +56,7 @@ public class Main
 		CloneAndRotate cc = new CloneAndRotate();
 		TestCommand test = new TestCommand();
 		ParseResults<Sender> parse = dispatcher.parse("cloneandrotate 1 2 3 4 5 6 7 8 9 360", new Sender());
-		ParseResults<Sender> parse2 = dispatcher.parse("test .5f", new Sender());
+		ParseResults<Sender> parse2 = dispatcher.parse("test .5", new Sender());
 		dispatcher.execute(parse2);
 	}
 	
