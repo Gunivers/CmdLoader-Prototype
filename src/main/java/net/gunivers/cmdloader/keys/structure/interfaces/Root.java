@@ -2,6 +2,8 @@ package net.gunivers.cmdloader.keys.structure.interfaces;
 
 import com.mojang.brigadier.CommandDispatcher;
 
+import net.gunivers.cmdloader.keys.structure.exceptions.KeyNotFoundException;
+
 /**
  * 
  * @author A~Z
@@ -9,5 +11,11 @@ import com.mojang.brigadier.CommandDispatcher;
  */
 public interface Root extends KeyContainer
 {
-	public <S> void rootAction(CommandDispatcher<S> dispatcher, String raw);
+	public default <S> void trigger(CommandDispatcher<S> dispatcher, String raw) throws KeyNotFoundException
+	{
+		
+	}
+	
+	@Deprecated
+	public <S> void rootAction(CommandDispatcher<S> dispatcher, String raw) throws KeyNotFoundException;
 }

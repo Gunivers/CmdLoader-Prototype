@@ -16,11 +16,8 @@ import net.gunivers.cmdloader.keys.structure.abstracts.SimpleValueKey;
  */
 public abstract class KeyRegister
 {
-	public static final ArgumentsKey arguments = new ArgumentsKey();
 	public static final CommandKey command = new CommandKey();
-	public static final DescriptionKey description = new DescriptionKey();
-	public static final OnlyOpKey only_op = new OnlyOpKey();
-	
+	public static final NameKey name = new NameKey();
 	
 	@SuppressWarnings("rawtypes")
 	public static final Map<String, Key> keys = Collections.unmodifiableMap(KeyRegister.keys);

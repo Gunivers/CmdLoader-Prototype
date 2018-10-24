@@ -1,8 +1,11 @@
 package net.gunivers.cmdloader;
 
+import java.io.BufferedInputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.StringWriter;
 import java.net.URISyntaxException;
 import java.util.HashMap;
 import java.util.Map.Entry;
@@ -38,7 +41,7 @@ public class Main
 
 
 	@SuppressWarnings({ "unused" })
-	public static void main(String[] args) throws CommandSyntaxException, IOException
+	public static void main(String[] args) throws CommandSyntaxException, IOException, KeyNotFoundException, KeyNotRootException
 	{
 		if (TEST_PARSE)
 			testParse();
@@ -52,59 +55,63 @@ public class Main
 		dispatcher.execute(parse);
 	}
 	
-	public static void testParse() throws IOException
-	{
-		File folder = new File(Main.folder);
-		
-		if (!folder.exists())
-			folder.createNewFile();
-		else
-			testParse_loop(folder);
-	}
+	/*/ 
+	/* ==========================================================================================================
+	/* ‼											TEST :: PARSE												‼
+	/* ==========================================================================================================
+	/*/
 	
-	public static void testParse_loop(File file)
+	public static void testParse() throws KeyNotFoundException, KeyNotRootException, IOException
 	{
-		for (File child : file.listFiles())
-		{
-			if (child.isDirectory())
-				testParse_loop(child);
+		org.json.JSONObject base = new org.json.JSONObject(Main.loadFile(new File("/test.json")));
 		
-			else
-			{
-				if (!child.getName().endsWith(".cmd"))
-					return;
-				
-				parse(child);
-			}
-		}
-	}
-	
-	@SuppressWarnings("unchecked")
-	public static void parse (File file)
-	{
-		HashMap<String, Object> hm = new HashMap<>();
-		
-		try (FileReader fr = new FileReader(file))
+		for (String name : org.json.JSONObject.getNames(base))
 		{
-			hm.putAll((JSONObject) new JSONParser().parse(fr));
-		} catch (IOException | ParseException e)
-		{
-			e.printStackTrace();
-		}
-		
-		for (Entry<String, Object> entry : hm.entrySet())
-		{
-			Key<?> key = KeyRegister.keys.get(entry.getKey());
+			Key<?> key = KeyRegister.keys.get(name);
 			
 			if (key == null)
-				throw new KeyNotFoundException("The key '" + entry.getKey() + "' does not exist");
+				throw new KeyNotFoundException(name);
+			if (!(key instanceof Root))
+				throw new KeyNotRootException("The key '" + key + "' should be root");
 			
-			if (! (key instanceof Root))
-				throw new KeyNotRootException("The key '" + entry.getKey() + "' cannot have a root context");
-			
-			((Root) key).rootAction(dispatcher, entry.getValue().toString());
+			((Root) key).rootAction(dispatcher, base.get(name).toString());
 		}
 	}
+
+	public static String loadFile(File f) throws IOException 
+	{
+		if (!f.exists())
+			f.createNewFile();
+			
+		String result = null;
+		
+		try
+		{
+			BufferedInputStream in = new BufferedInputStream(new FileInputStream(f));
+			StringWriter out = new StringWriter();
+			int b;
+			
+			while ((b = in.read()) != -1)
+				out.write(b);
+			
+			out.flush();
+			out.close();
+			in.close();
+			
+			return result = out.toString();
+		} catch (IOException ie)
+		{
+			ie.printStackTrace();
+		}
+		
+		return result;
+	}
+	
+	/*/ 
+	/* ==========================================================================================================
+	/* ‼											TEST :: JSON												‼
+	/* ==========================================================================================================
+	/*/
 	
 	@SuppressWarnings("unchecked")
 	public static void testJson()

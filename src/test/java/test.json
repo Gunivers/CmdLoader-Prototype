@@ -1,0 +1,9 @@
+{
+	"command":
+	{
+		"description": "Get a cookie",
+		"name": "cookie",
+		
+		"only_op": true
+	}
+}
