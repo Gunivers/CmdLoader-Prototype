@@ -20,6 +20,9 @@ import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.ParseResults;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 
+import net.gunivers.cmdloader.commands.CloneAndRotate;
+import net.gunivers.cmdloader.commands.Sender;
+import net.gunivers.cmdloader.commands.TestCommand;
 import net.gunivers.cmdloader.keys.Key;
 import net.gunivers.cmdloader.keys.keys.KeyRegister;
 import net.gunivers.cmdloader.keys.structure.exceptions.KeyNotFoundException;
@@ -36,8 +39,8 @@ public class Main
 	public final static CommandDispatcher<Sender> dispatcher = new CommandDispatcher<>();
 	public final static String folder = "/resource";
 	
-	public final static boolean TEST_JSON = true;
-	public final static boolean TEST_PARSE = true;
+	public final static boolean TEST_JSON = false;
+	public final static boolean TEST_PARSE = false;
 
 
 	@SuppressWarnings({ "unused" })
@@ -51,8 +54,10 @@ public class Main
 		
 		
 		CloneAndRotate cc = new CloneAndRotate();
+		TestCommand test = new TestCommand();
 		ParseResults<Sender> parse = dispatcher.parse("cloneandrotate 1 2 3 4 5 6 7 8 9 360", new Sender());
-		dispatcher.execute(parse);
+		ParseResults<Sender> parse2 = dispatcher.parse("test .5f", new Sender());
+		dispatcher.execute(parse2);
 	}
 	
 	/*/ 

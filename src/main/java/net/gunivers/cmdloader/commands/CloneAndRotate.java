@@ -1,8 +1,10 @@
-package net.gunivers.cmdloader;
+package net.gunivers.cmdloader.commands;
 
 import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.builder.RequiredArgumentBuilder;
+
+import net.gunivers.cmdloader.Main;
 
 /**
  * 

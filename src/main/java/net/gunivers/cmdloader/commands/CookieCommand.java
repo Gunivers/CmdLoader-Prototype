@@ -1,4 +1,4 @@
-package net.gunivers.cmdloader;
+package net.gunivers.cmdloader.commands;
 
 import java.util.HashMap;
 
@@ -6,6 +6,8 @@ import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.builder.RequiredArgumentBuilder;
 import com.mojang.brigadier.context.CommandContext;
+
+import net.gunivers.cmdloader.Main;
 
 /**
  * 
@@ -25,18 +27,6 @@ public class CookieCommand {
 					return 1;
 				})));
 	}
-}
-
-class Sender {
-	private HashMap<Item, Integer> inventory = new HashMap<>();
-
-	public void give(Item item, int nb) {
-		if (inventory.containsKey(item))
-			inventory.replace(item, inventory.get(item) + nb);
-		else
-			inventory.put(item, nb);
-	}
-
 }
 
 enum Item {
