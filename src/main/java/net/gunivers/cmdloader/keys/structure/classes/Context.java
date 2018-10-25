@@ -1,13 +1,12 @@
 package net.gunivers.cmdloader.keys.structure.classes;
 
 import net.gunivers.cmdloader.keys.Key;
-import net.gunivers.cmdloader.keys.structure.enums.ValueType;
 import net.gunivers.cmdloader.keys.structure.interfaces.KeyContainer;
 
 public class Context
 {
-	public final Key<?> parent;
-	public final ValueType in;
+	public final Context parent;
+	public final Key<?> in;
 	
 	public final int layer;
 	public final String raw;
@@ -21,14 +20,14 @@ public class Context
 	 *              the keyContainer
 	 * @param in
 	 */
-	public Context(Key<?> parent, ValueType in, String raw)
+	public Context(Context parent, Key<?> in, String raw)
 	{
 		this(parent, in, -1, raw);
 	}
 	
-	public Context(Key<?> parent, ValueType in, int layer, String raw)
+	public Context(Context parent, Key<?> in, int layer, String raw)
 	{
-		if (!(parent instanceof KeyContainer))
+		if (!(in instanceof KeyContainer))
 			throw new InstantiationError("A Context cannot be instanciated outside of a KeyContainer");
 		
 		if (raw == null)

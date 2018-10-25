@@ -2,10 +2,12 @@ package net.gunivers.cmdloader.keys.keys;
 
 import java.util.function.Predicate;
 
+import com.mojang.brigadier.CommandDispatcher;
+
 import net.gunivers.cmdloader.keys.structure.abstracts.SimpleValueKey;
 
-public class NameKey extends SimpleValueKey<String> {
-
+public class NameKey extends SimpleValueKey<String>
+{
 	public NameKey()
 	{
 		super("name", null, true);
@@ -18,15 +20,14 @@ public class NameKey extends SimpleValueKey<String> {
 	}
 
 	@Override
-	public Predicate<String> getValider() {
-		// TODO Auto-generated method stub
-		return null;
+	public Predicate<String> getValider()
+	{
+		return (String s) -> true;
 	}
 
 	@Override
-	public boolean trigger(String value, KeyInstance<String> instance) {
-		// TODO Auto-generated method stub
+	public <S> boolean trigger(CommandDispatcher<S> dispatcher, KeyInstance<String> instance)
+	{
 		return false;
 	}
-
 }

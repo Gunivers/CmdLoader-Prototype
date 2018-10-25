@@ -8,6 +8,7 @@ import java.util.function.Predicate;
  *
  * @param <T>
  */
+@FunctionalInterface
 public interface SubValider<T>
 {
 	public Predicate<T> getSubValider();

@@ -2,9 +2,10 @@ package net.gunivers.cmdloader.keys.structure.abstracts;
 
 import java.util.function.Predicate;
 
+import org.json.JSONObject;
+
 import net.gunivers.cmdloader.keys.Key;
 import net.gunivers.cmdloader.keys.structure.interfaces.SubValider;
-import net.gunivers.cmdloader.keys.structure.classes.Compound;
 import net.gunivers.cmdloader.keys.structure.interfaces.KeyContainer;
 
 /**
@@ -12,7 +13,7 @@ import net.gunivers.cmdloader.keys.structure.interfaces.KeyContainer;
  * @author A~Z
  *
  */
-public abstract class CompoundKey extends Key<Compound<CompoundKey>> implements SubValider<Compound<CompoundKey>>, KeyContainer
+public abstract class CompoundKey extends Key<JSONObject> implements SubValider<JSONObject>, KeyContainer
 {
 	private int min = 0;
 	private int max = Integer.MAX_VALUE;
@@ -31,8 +32,8 @@ public abstract class CompoundKey extends Key<Compound<CompoundKey>> implements 
 	}
 
 	@Override
-	public final Predicate<Compound<CompoundKey>> getValider()
+	public final Predicate<JSONObject> getValider()
 	{
-		return (Compound<CompoundKey> k) -> min <= k.size() && k.size() <= max && getSubValider().test(k);
+		return (JSONObject j) -> min <= j.length() && j.length() <= max && getSubValider().test(j);
 	}
 }

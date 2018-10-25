@@ -1,5 +1,6 @@
 package net.gunivers.cmdloader.keys.structure.classes;
 
+/*
 import java.io.IOException;
 import java.io.StringReader;
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ import net.gunivers.cmdloader.keys.structure.interfaces.Parser;
  * 
  * @author A~Z
  *
- */
+ * /
 @SuppressWarnings("rawtypes")
 public class Compound<S extends Key<?>> implements Parser<KeyInstance[]>
 {
@@ -70,3 +71,4 @@ public class Compound<S extends Key<?>> implements Parser<KeyInstance[]>
 		return keys.size();
 	}
 }
+*/

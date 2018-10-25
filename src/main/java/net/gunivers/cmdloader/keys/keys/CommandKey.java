@@ -10,10 +10,9 @@ import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 
 import net.gunivers.cmdloader.keys.Key;
 import net.gunivers.cmdloader.keys.structure.abstracts.CompoundKey;
-import net.gunivers.cmdloader.keys.structure.classes.Compound;
 import net.gunivers.cmdloader.keys.structure.classes.Context;
-import net.gunivers.cmdloader.keys.structure.enums.ValueType;
 import net.gunivers.cmdloader.keys.structure.exceptions.KeyNotFoundException;
+import net.gunivers.cmdloader.keys.structure.interfaces.KeyContainer;
 import net.gunivers.cmdloader.keys.structure.interfaces.Root;
 
 /**
@@ -21,7 +20,7 @@ import net.gunivers.cmdloader.keys.structure.interfaces.Root;
  * @author A~Z
  *
  */
-public class CommandKey extends CompoundKey implements Root
+public class CommandKey extends CompoundKey implements Root, KeyContainer
 {
 	protected CommandKey()
 	{
@@ -29,21 +28,17 @@ public class CommandKey extends CompoundKey implements Root
 	}
 
 	@Override
-	public Predicate<Compound<CompoundKey>> getSubValider() {return (Compound<CompoundKey> keys) -> this.validateKeys(keys.getCompound());}
+	public Predicate<JSONObject> getSubValider() {return keys -> this.validateKeys(JSONObject.getNames(keys));}
 
 	@Override
-	public KeyInstance<Compound<CompoundKey>> parse(String value)
+	public KeyInstance<JSONObject> parse(String value)
 	{
-		Compound<CompoundKey> c = new Compound<CompoundKey>(this);
-		c.parse(value);
-		
-		return this.newInstance(c, new Context(this, ValueType.Compound, 0, value));
+		return this.newInstance(new JSONObject(value), new Context(null, this, 0, value));
 	}
 
 	@Override
-	public boolean trigger(Compound<CompoundKey> value, KeyInstance<Compound<CompoundKey>> instance)
+	public <S> boolean trigger(CommandDispatcher<S> dispatcher, KeyInstance<JSONObject> instance)
 	{
-		// TODO Auto-generated method stub
 		return false;
 	}
 
@@ -73,10 +68,20 @@ public class CommandKey extends CompoundKey implements Root
 				dispatcher.register(LiteralArgumentBuilder.literal(compound.getString(key.getName())));
 		}
 		
-		
 		return;
 	}
 
+	@Deprecated
+	public boolean validateKeys(String[] keys)
+	{
+		Key<?>[] array = new Key<?>[keys.length];
+		
+		for (int i = 0; i < keys.length; i++)
+			array[i] = KeyRegister.keys.get(keys[i]);
+		
+		return this.validateKeys(array);
+	}
+	
 	@SuppressWarnings("rawtypes")
 	@Override
 	public Key[] getNecessaryKeys()

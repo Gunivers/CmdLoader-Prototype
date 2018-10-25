@@ -7,7 +7,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map.Entry;
 
 import org.json.simple.JSONArray;
@@ -19,6 +22,7 @@ import com.google.common.base.Strings;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.ParseResults;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
+import com.mojang.brigadier.tree.CommandNode;
 
 import net.gunivers.cmdloader.commands.CloneAndRotate;
 import net.gunivers.cmdloader.commands.Sender;
@@ -55,9 +59,12 @@ public class Main
 		
 		CloneAndRotate cc = new CloneAndRotate();
 		TestCommand test = new TestCommand();
+		
 		ParseResults<Sender> parse = dispatcher.parse("cloneandrotate 1 2 3 4 5 6 7 8 9 360", new Sender());
 		ParseResults<Sender> parse2 = dispatcher.parse("test .5", new Sender());
 		dispatcher.execute(parse2);
+		
+		System.out.println(Main.cmdView(dispatcher));
 	}
 	
 	/*/ 
@@ -180,5 +187,32 @@ public class Main
 			} else
 				System.out.println(Strings.repeat("\t", numberTab + 1) + o);
 		}
+	}
+	
+	public static <S> String cmdView(CommandDispatcher<S> dispatcher)
+	{
+		final StringBuilder string = new StringBuilder("---------------------------------- View ----------------------------------");
+		cmdView_loop(dispatcher.getRoot()).forEach(s -> string.append("\n" + s));
+		return string.toString();
+	}
+	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public static List<String> cmdView_loop(CommandNode root)
+	{
+		ArrayList<String> tree = new ArrayList<>();
+		
+		for (CommandNode child : (Collection<CommandNode>) root.getChildren())
+		{
+			tree.add("── " + child.getName());
+			
+			List<String> subTree = cmdView_loop(child);
+			
+			for (int i = 0; i < subTree.size(); i++)
+			{
+				tree.add("   " + (i == subTree.size()-1 ? "└" : i == 0 ? "├" : "│") + subTree.get(i));
+			}
+		}
+		
+		return tree;
 	}
 }

@@ -9,13 +9,8 @@ import net.gunivers.cmdloader.keys.structure.exceptions.KeyNotFoundException;
  * @author A~Z
  *
  */
-public interface Root extends KeyContainer
+@FunctionalInterface
+public interface Root
 {
-	public default <S> void trigger(CommandDispatcher<S> dispatcher, String raw) throws KeyNotFoundException
-	{
-		
-	}
-	
-	@Deprecated
 	public <S> void rootAction(CommandDispatcher<S> dispatcher, String raw) throws KeyNotFoundException;
 }

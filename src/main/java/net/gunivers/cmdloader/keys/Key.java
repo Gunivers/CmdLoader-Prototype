@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.Set;
 import java.util.function.Predicate;
 
+import com.mojang.brigadier.CommandDispatcher;
+
 import net.gunivers.cmdloader.keys.structure.classes.Context;
 import net.gunivers.cmdloader.keys.structure.interfaces.Parser;
 
@@ -62,7 +64,7 @@ public abstract class Key<T> implements Parser<Key.KeyInstance<T>>
 
 	// Abstract Methods
 	public abstract Predicate<T> getValider();
-	public abstract boolean trigger(T value, KeyInstance<T> instance);
+	public abstract <S> boolean trigger(CommandDispatcher<S> dispatcher, KeyInstance<T> instance);
 	
 	/**
 	 * 
@@ -99,9 +101,9 @@ public abstract class Key<T> implements Parser<Key.KeyInstance<T>>
 			this.value = value;
 		}
 		
-		public boolean trigger(K value)
+		public <S> boolean trigger(CommandDispatcher<S> dispatcher)
 		{
-			return key.trigger(value, this);
+			return key.trigger(dispatcher, this);
 		}
 		
 		public K getValue() { return value; }
